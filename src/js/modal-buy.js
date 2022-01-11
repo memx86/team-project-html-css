@@ -1,11 +1,11 @@
-// Задать кнопке открытия модального окна аттрибут data-modal-open
-// Задать backdrop модального окна аттрибуты data-modal, class="is-hidden"
-// Задать кнопке закрытия модального окна аттрибут data-modal-close
+// Задать кнопке открытия модального окна аттрибут data-modal-open="buy"
+// Задать backdrop модального окна аттрибуты data-modal="buy", class="is-hidden"
+// Задать кнопке закрытия модального окна аттрибут data-modal-close="buy"
 // Модальное окно закрывается по клику на кнопку закрытия, по клику в бэкдроп, по нажатию клавиши "Esc"
 const refs = {
-  modal: document.querySelector('[data-modal]'),
-  openBtn: document.querySelector('[data-modal-open]'),
-  closeBtn: document.querySelector('[data-modal-close]'),
+  modal: document.querySelector('[data-modal="buy"]'),
+  openBtn: document.querySelector('[data-modal-open="buy"]'),
+  closeBtn: document.querySelector('[data-modal-close="buy"]'),
 };
 
 refs.openBtn.addEventListener('click', onModalOpenBtnClick);

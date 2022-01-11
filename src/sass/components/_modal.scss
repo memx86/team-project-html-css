@@ -1,12 +1,3 @@
-.buy-btn {
-  @extend %button-dark;
-  margin-left: auto;
-  margin-right: auto;
-}
-.buy-btn__icon {
-  margin-left: 12px;
-  fill: transparent;
-}
 .backdrop {
   position: fixed;
   top: 0;
@@ -26,84 +17,20 @@
     visibility: hidden;
   }
 }
-.buy {
+.modal-close {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 3vw;
-  width: 90vw;
-  min-height: 320px;
-  @include mq(mobile) {
-    max-width: calc(460px + 13vw);
-  }
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms linear;
-  background-color: var(--bg-dark-cl);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  .backdrop.is-hidden & {
-    transform: translate(-50%, -50%) scale(1.5);
-  }
-}
-.buy__title {
-  @extend %title;
-  font-size: calc(16px + 1vw);
-  text-align: center;
-}
-.buy__label {
-  display: block;
-  position: relative;
-  margin-top: 2em;
-  font-size: 16px;
-}
-
-.buy__input {
-  display: block;
-  padding: 10px;
-  width: 100%;
-  background-color: transparent;
-  border: 2px solid var(--bg-first-cl);
-  border-radius: 10px;
-  &:focus,
-  &:not(:placeholder-shown) {
-    outline: none;
-    border-color: var(--accent-cl);
-  }
-}
-.buy__text {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  transition: transform 250ms linear;
-  .buy__input:focus + &,
-  .buy__input:not(:placeholder-shown) + & {
-    transform: translateY(-150%);
-  }
-}
-.buy__input--textarea {
-  resize: none;
-  min-height: 96px;
-}
-.buy__button {
-  @extend %button-dark;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.buy__close {
-  position: absolute;
-  top: 2vw;
-  right: 2vw;
+  top: 0;
+  right: 0;
   width: 30px;
   height: 30px;
+  transform: translate(50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--accent-cl);
-  border: 1px solid var(--accent-cl);
+  border: 1px solid transparent;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: var(--light-cl);
   cursor: pointer;
   transition: color 250ms linear, background-color 250ms linear;
   &:hover,
