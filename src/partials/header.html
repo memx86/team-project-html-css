@@ -10,7 +10,7 @@
         />
         <source
           srcset="./images/header/logo-l.png 1x, ./images/header/logo-l@2x.png 2x"
-          type="image/jpeg"
+          type="image/png"
           media="(min-width: 1280px)"
         />
         <source
@@ -20,7 +20,7 @@
         />
         <source
           srcset="./images/header/logo-m.png 1x, ./images/header/logo-m@2x.png 2x"
-          type="image/jpeg"
+          type="image/png"
           media="(min-width: 768px)"
         />
         <source
@@ -30,7 +30,7 @@
         />
         <source
           srcset="./images/header/logo-s.png 1x, ./images/header/logo-s@2x.png 2x"
-          type="image/jpeg"
+          type="image/png"
           media="(min-width: 320px)"
         />
         <img src="./images/header/logo-l.png" alt="Логотип ice cream" />
@@ -45,14 +45,14 @@
         <li class="nav__item"><a href="#contacts" class="nav__link">Contact</a></li>
       </ul>
     </nav>
-    <button type="button" class="data-modal-open burger__btn">
+    <button type="button" class="burger__btn">
       <span class="header__line"></span>
       <span class="header__line"></span>
       <span class="header__line"></span>
     </button>
-    <button type="button" class="button-buy-now">
+    <button type="button" class="buy-btn header__buy-btn" data-modal-open>
       Buy now
-      <svg class="button-buy-now__bracket-right" width="8" height="8">
+      <svg class="buy-btn__icon" width="8" height="8">
         <use href="./images/sprite.svg#bracket-right"></use>
       </svg>
     </button>
@@ -72,11 +72,66 @@
           <li><a href="#advantages" class="hero__buttons--light">How it&#39;s made?</a></li>
         </ul>
       </div>
-      <div class="hero__bottom"></div>
+      <div class="hero__bottom">
+        <div class="hero__img-wrap">
+          <picture class="hero__img-milk">
+            <source
+              srcset="./images/header/hero-milk-l.webp 1x, ./images/header/hero-milk-l@2x.webp 2x"
+              type="image/webp"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="./images/header/hero-milk-l.png 1x, ./images/header/hero-milk-l@2x.png 2x"
+              type="image/png"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="./images/header/hero-milk-m.webp 1x, ./images/header/hero-milk-m@2x.webp 2x"
+              type="image/webp"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./images/header/hero-milk-m.png 1x, ./images/header/hero-milk-m@2x.png 2x"
+              type="image/png"
+              media="(min-width: 768px)"
+            />
+            <img src="./images/header/hero-milk-m.png" alt="Прозрачный кувшин с молоком" />
+          </picture>
+        </div>
+        <div class="hero__description-wrap">
+          <p class="hero__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et
+          </p>
+          <picture class="hero__img-arrow">
+            <source
+              srcset="./images/header/hero-arrow-l.webp 1x, ./images/header/hero-arrow-l@2x.webp 2x"
+              type="image/webp"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="./images/header/hero-arrow-l.png 1x, ./images/header/hero-arrow-l@2x.png 2x"
+              type="image/png"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="./images/header/hero-arrow-m.webp 1x, ./images/header/hero-arrow-m@2x.webp 2x"
+              type="image/webp"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="./images/header/hero-arrow-m.png 1x, ./images/header/hero-arrow-m@2x.png 2x"
+              type="image/png"
+              media="(min-width: 768px)"
+            />
+            <img src="./images/header/hero-arrow-m.png" alt="Красная стрелка" />
+          </picture>
+        </div>
+      </div>
     </div>
 
     <div class="hero__img">
-      <picture classhero__img--ice>
+      <picture class="hero__img-ellipse">
         <source
           srcset="./images/header/ellipse-l.webp 1x, ./images/header/ellipse-l@2x.webp 2x"
           type="image/webp"
@@ -84,7 +139,7 @@
         />
         <source
           srcset="./images/header/ellipse-l.png 1x, ./images/header/ellipse-l@2x.png 2x"
-          type="image/jpeg"
+          type="image/png"
           media="(min-width: 1280px)"
         />
         <source
@@ -94,7 +149,7 @@
         />
         <source
           srcset="./images/header/ellipse-m.png 1x, ./images/header/ellipse-m@2x.png 2x"
-          type="image/jpeg"
+          type="image/png"
           media="(min-width: 768px)"
         />
         <source
@@ -104,12 +159,12 @@
         />
         <source
           srcset="./images/header/ellipse-s.png 1x, ./images/header/ellipse-s@2x.png 2x"
-          type="image/jpeg"
+          type="image/png"
           media="(min-width: 320px)"
         />
         <img src="./images/header/ellipse-l.png" alt="Круг розового цвета" />
       </picture>
-      <picture class="hero__img--ice">
+      <picture class="hero__img-ice">
         <source
           srcset="./images/header/hero-ice-l.webp 1x, ./images/header/hero-ice-l@2x.webp 2x"
           type="image/webp"
@@ -117,7 +172,7 @@
         />
         <source
           srcset="./images/header/hero-ice-l.png 1x, ./images/header/hero-ice-l@2x.png 2x"
-          type="image/jpeg"
+          type="image/png"
           media="(min-width: 1280px)"
         />
         <source
@@ -127,7 +182,7 @@
         />
         <source
           srcset="./images/header/hero-ice-m.png 1x, ./images/header/hero-ice-m@2x.png 2x"
-          type="image/jpeg"
+          type="image/png"
           media="(min-width: 768px)"
         />
         <source
@@ -137,7 +192,7 @@
         />
         <source
           srcset="./images/header/hero-ice-s.png 1x, ./images/header/hero-ice-s@2x.png 2x"
-          type="image/jpeg"
+          type="image/png"
           media="(min-width: 320px)"
         />
         <img src="./images/header/hero-ice-l.png" alt="Рожок с шестью шариками мороженного" />

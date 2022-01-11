@@ -1,4 +1,7 @@
 .buy-btn {
+  @include mq(mobile-only) {
+    display: none;
+  }
   @extend %button-dark;
   margin-left: auto;
   margin-right: auto;
