@@ -1,0 +1,76 @@
+// Задать кнопке открытия модального окна аттрибут data-modal-open="map"
+// Задать backdrop модального окна аттрибуты data-modal="map", class="is-hidden"
+// Задать кнопке закрытия модального окна аттрибут data-modal-close="map"
+// Модальное окно закрывается по клику на кнопку закрытия, по клику в бэкдроп, по нажатию клавиши "Esc"
+.map {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 3vw;
+  width: 90vw;
+  background-color: var(--bg-dark-cl);
+  @include mq(mobile) {
+    max-width: calc(460px + 13vw);
+  }
+  @include mq(tablet-only) {
+    max-width: calc(748px + 13vw);
+  }
+  @include mq(desktop) {
+    max-width: calc(1260px + 13vw);
+  }
+  @media (min-height: 480px) {
+    padding: 1vw;
+  }
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+.map__list {
+  margin-bottom: 3vw;
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+}
+.map__item {
+  width: calc((100% - 9vw) / 3);
+}
+.map__link {
+  @extend %title;
+  padding: 2vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: calc(7px + 1vw);
+  @media (max-height: 479px) {
+    padding: 1vw;
+    font-size: calc(4px + 1vw);
+  }
+  border-radius: 20px;
+  color: var(--accent-cl);
+  background-color: var(--bg-second-cl);
+  transition: color 250ms linear, background-color 250ms linear;
+  &--truck {
+    background-color: var(--bg-third-cl);
+  }
+  &:hover,
+  &:focus {
+    color: var(--light-cl);
+    background-color: var(--accent-cl);
+    outline: none;
+  }
+}
+.map__text {
+  display: block;
+}
+.map__iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 6vw);
+  min-height: calc(80vh - 7vw);
+}
