@@ -1,1 +1,17 @@
-
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-first-cl);
+  }
+  &__line {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: var(--accent-cl);
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+}
