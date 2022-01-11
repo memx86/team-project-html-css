@@ -1,3 +1,4 @@
+<!-- SECTION HEADER -->
 <header class="header">
   <div class="header__container container">
     <a class="logo link" href="" id="logo">
@@ -44,10 +45,103 @@
         <li class="nav__item"><a href="#contacts" class="nav__link">Contact</a></li>
       </ul>
     </nav>
-    <button type="button" class="menu-open-btn burger__btn">
+    <button type="button" class="data-modal-open burger__btn">
       <span class="header__line"></span>
       <span class="header__line"></span>
       <span class="header__line"></span>
     </button>
+    <button type="button" class="button-buy-now">
+      Buy now
+      <svg class="button-buy-now__bracket-right" width="8" height="8">
+        <use href="./images/sprite.svg#bracket-right"></use>
+      </svg>
+    </button>
   </div>
 </header>
+<!-- SECTION HERO -->
+<section class="hero section">
+  <div class="hero__container container">
+    <div class="hero__content">
+      <div class="hero__top">
+        <h1 class="hero__title">
+          ice cream made with
+          <span class="hero__title--accent">passion</span>
+        </h1>
+        <ul class="hero__buttons">
+          <li><a href="#products" class="hero__buttons--dark">Products</a></li>
+          <li><a href="#advantages" class="hero__buttons--light">How it&#39;s made?</a></li>
+        </ul>
+      </div>
+      <div class="hero__bottom"></div>
+    </div>
+
+    <div class="hero__img">
+      <picture classhero__img--ice>
+        <source
+          srcset="./images/header/ellipse-l.webp 1x, ./images/header/ellipse-l@2x.webp 2x"
+          type="image/webp"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="./images/header/ellipse-l.png 1x, ./images/header/ellipse-l@2x.png 2x"
+          type="image/jpeg"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="./images/header/ellipse-m.webp 1x, ./images/header/ellipse-m@2x.webp 2x"
+          type="image/webp"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./images/header/ellipse-m.png 1x, ./images/header/ellipse-m@2x.png 2x"
+          type="image/jpeg"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./images/header/ellipse-s.webp 1x, ./images/header/ellipse-s@2x.webp 2x"
+          type="image/webp"
+          media="(min-width: 320px)"
+        />
+        <source
+          srcset="./images/header/ellipse-s.png 1x, ./images/header/ellipse-s@2x.png 2x"
+          type="image/jpeg"
+          media="(min-width: 320px)"
+        />
+        <img src="./images/header/ellipse-l.png" alt="Круг розового цвета" />
+      </picture>
+      <picture class="hero__img--ice">
+        <source
+          srcset="./images/header/hero-ice-l.webp 1x, ./images/header/hero-ice-l@2x.webp 2x"
+          type="image/webp"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="./images/header/hero-ice-l.png 1x, ./images/header/hero-ice-l@2x.png 2x"
+          type="image/jpeg"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="./images/header/hero-ice-m.webp 1x, ./images/header/hero-ice-m@2x.webp 2x"
+          type="image/webp"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./images/header/hero-ice-m.png 1x, ./images/header/hero-ice-m@2x.png 2x"
+          type="image/jpeg"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./images/header/hero-ice-s.webp 1x, ./images/header/hero-ice-s@2x.webp 2x"
+          type="image/webp"
+          media="(min-width: 320px)"
+        />
+        <source
+          srcset="./images/header/hero-ice-s.png 1x, ./images/header/hero-ice-s@2x.png 2x"
+          type="image/jpeg"
+          media="(min-width: 320px)"
+        />
+        <img src="./images/header/hero-ice-l.png" alt="Рожок с шестью шариками мороженного" />
+      </picture>
+    </div>
+  </div>
+</section>

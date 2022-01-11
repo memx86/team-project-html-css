@@ -1,13 +1,22 @@
+// ----------------SECTION HEADER--------------
 .header {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   &__container {
+    padding-top: 6px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--bg-first-cl);
+    @include mq(tablet) {
+      padding-top: 38px;
+    }
+    @include mq(desktop) {
+      max-width: 1280px;
+      justify-content: start;
+    }
   }
   &__line {
     display: block;
@@ -19,13 +28,35 @@
     }
   }
 }
+.logo {
+  margin-right: 61px;
+  @include mq(tablet) {
+    margin-right: 291px;
+  }
+  @include mq(desktop) {
+    margin-right: 110px;
+  }
+}
 .nav {
+  margin-right: 110px;
   @include mq(not-desktop) {
     display: none;
   }
 
   &__list {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__item {
+    color: var(--light-cl);
+    @include font(16px, 1.31, 700);
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+    &:nth-child(1) {
+      color: var(--accent-cl);
+    }
   }
 }
 .burger__btn {
@@ -35,5 +66,119 @@
   background-color: var(--bg-first-cl);
   @include mq(desktop) {
     display: none;
+  }
+}
+.button-buy-now {
+  @include mq(mobile-only) {
+    display: none;
+  }
+  @extend %button-light;
+  &__bracket-right {
+    margin-left: 12px;
+    text-align: center;
+  }
+}
+// ----------------SECTION HERO--------------
+.hero {
+  background-color: var(--bg-first-cl);
+  padding-top: 56px;
+  height: 502px;
+  @include mq(tablet) {
+    padding-top: 94px;
+    height: 399px;
+  }
+  @include mq(desktop) {
+    padding-top: 160px;
+    height: 655px;
+  }
+  &__container {
+    position: static;
+  }
+  &__content {
+    position: relative;
+    z-index: 2;
+    margin-top: 137px;
+  }
+  &__top {
+    width: 218px;
+    @include mq(tablet) {
+      width: 162px;
+    }
+    @include mq(desktop) {
+      width: 277px;
+    }
+  }
+  &__title {
+    @extend %title;
+    color: var(--light-cl);
+    @include font(26px, 1.15, 400);
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+    @include mq(tablet) {
+      @include font(22px, 1.14, 400);
+    }
+    @include mq(desktop) {
+      @include font(38px, 1.16, 400);
+      margin-bottom: 25px;
+    }
+  }
+  &__title--accent {
+    color: var(--accent-cl);
+    @include font(48px, 0.965, 400);
+    letter-spacing: 0.04em;
+    @include mq(tablet) {
+      @include font(34px, 0.905, 400);
+    }
+    @include mq(desktop) {
+      @include font(58px, 0.905, 400);
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  &__buttons--dark {
+    @extend %button-dark;
+    @include font(8px, 1.25, 400);
+    min-width: 63px;
+    min-height: 24px;
+    margin-right: 9px;
+    @include mq(desktop) {
+      @include font(14px, 1.29, 400);
+      min-width: 104px;
+      min-height: 40px;
+      margin-right: 15px;
+    }
+  }
+  &__buttons--light {
+    @extend %button-light;
+    @include font(8px, 1.25, 400);
+    min-width: 83px;
+    min-height: 24px;
+    @include mq(desktop) {
+      @include font(14px, 1.29, 400);
+      min-width: 138px;
+      min-height: 40px;
+    }
+  }
+  // &__bottom {
+  // }
+}
+// ---------------КОНТЕЙНЕР ДЛЯ ДВУХ ФОТО-------------
+.hero__img {
+  position: absolute;
+  top: 83px;
+  right: 0;
+  width: 289px;
+  height: 420px;
+  @include mq(tablet) {
+    top: 31px;
+  }
+  &--ice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50%, 9px);
   }
 }
