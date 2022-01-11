@@ -4,17 +4,18 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
   &__container {
     padding-top: 6px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--bg-first-cl);
+    background-color: transparent;
     @include mq(tablet) {
       padding-top: 38px;
     }
     @include mq(desktop) {
-      max-width: 1280px;
+      max-width: 1230px;
       justify-content: start;
     }
   }
@@ -62,6 +63,9 @@
       color: var(--accent-cl);
     }
   }
+  &__link {
+    z-index: 2;
+  }
 }
 .burger__btn {
   border: 1px solid transparent;
@@ -80,11 +84,11 @@
   padding-top: 56px;
   height: 502px;
   @include mq(tablet) {
-    padding-top: 94px;
+    padding-top: 87px;
     height: 399px;
   }
   @include mq(desktop) {
-    padding-top: 160px;
+    padding-top: 141px;
     height: 655px;
   }
   &__container {
@@ -100,14 +104,25 @@
     z-index: 2;
   }
   &__top {
-    width: 218px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
     @include mq(tablet) {
-      width: 162px;
       margin-bottom: 19px;
     }
     @include mq(desktop) {
-      width: 277px;
       margin-bottom: 56px;
+    }
+  }
+  &__top-left {
+    width: 218px;
+    @include mq(tablet) {
+      width: 162px;
+    }
+    @include mq(desktop) {
+      width: 277px;
+      padding-top: 15px;
     }
   }
   &__title {
@@ -164,7 +179,56 @@
       min-height: 40px;
     }
   }
+  &__top-right {
+    @include mq(mobile-only) {
+      display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 51px;
+    @include font(8px, 1.25, 400);
+    letter-spacing: 0;
+    color: var(--light-cl);
+    @include mq(desktop) {
+      @include font(14px, 1.29, 400);
+      width: 92px;
+    }
+  }
+  &__number {
+    position: relative;
+    @extend %title;
+    color: var(--accent-cl);
+    @include font(28px, 1.14, 400);
+    @include mq(desktop) {
+      @include font(46px, 1.15, 400);
+    }
+    &-second {
+      margin-top: 13px;
+      @include mq(desktop) {
+        margin-top: 20px;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 22px;
+      top: -3px;
+      z-index: -1;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--light-cl);
+      @include mq(desktop) {
+        left: 43px;
+        top: -3px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
   &__bottom {
+    position: relative;
     @include mq(mobile-only) {
       display: none;
     }
@@ -200,8 +264,12 @@
       margin-bottom: 20px;
     }
   }
+  &__img-girl {
+    position: absolute;
+    right: 0;
+    bottom: -27px;
+  }
 }
-// Контейнер для фото "Кувшин с молоком" и текста
 
 // ---------------КОНТЕЙНЕР ДЛЯ ДВУХ ФОТО-------------
 .hero__img {
@@ -216,6 +284,12 @@
     width: 324px;
     height: 368px;
   }
+  @include mq(desktop) {
+    top: 52px;
+    right: 267px;
+    width: 538px;
+    height: 602px;
+  }
   &-ice {
     position: absolute;
     top: 0;
@@ -223,6 +297,9 @@
     transform: translate(50%, 9px);
     @include mq(tablet) {
       transform: translate(40%, 32px);
+    }
+    @include mq(desktop) {
+      transform: translate(40%, 46px);
     }
   }
   &-ellipse {

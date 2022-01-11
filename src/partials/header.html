@@ -63,14 +63,22 @@
   <div class="hero__container container">
     <div class="hero__content">
       <div class="hero__top">
-        <h1 class="hero__title">
-          ice cream made with
-          <span class="hero__title--accent">passion</span>
-        </h1>
-        <ul class="hero__buttons">
-          <li><a href="#products" class="hero__buttons--dark">Products</a></li>
-          <li><a href="#advantages" class="hero__buttons--light">How it&#39;s made?</a></li>
-        </ul>
+        <div class="hero__top-left">
+          <h1 class="hero__title">
+            ice cream made with
+            <span class="hero__title--accent">passion</span>
+          </h1>
+          <ul class="hero__buttons">
+            <li><a href="#products" class="hero__buttons--dark">Products</a></li>
+            <li><a href="#advantages" class="hero__buttons--light">How it&#39;s made?</a></li>
+          </ul>
+        </div>
+        <div class="hero__top-right">
+          <span class="hero__number">16</span>
+          <span>cafes</span>
+          <span class="hero__number hero__number-second">23</span>
+          <span>food trucks</span>
+        </div>
       </div>
       <div class="hero__bottom">
         <div class="hero__img-wrap">
@@ -127,6 +135,29 @@
             <img src="./images/header/hero-arrow-m.png" alt="Красная стрелка" />
           </picture>
         </div>
+        <picture class="hero__img-girl">
+          <source
+            srcset="./images/header/hero-girl-l.webp 1x, ./images/header/hero-girl-l@2x.webp 2x"
+            type="image/webp"
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="./images/header/hero-girl-l.png 1x, ./images/header/hero-girl-l@2x.png 2x"
+            type="image/png"
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="./images/header/hero-girl-m.webp 1x, ./images/header/hero-girl-m@2x.webp 2x"
+            type="image/webp"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="./images/header/hero-girl-m.png 1x, ./images/header/hero-girl-m@2x.png 2x"
+            type="image/png"
+            media="(min-width: 768px)"
+          />
+          <img src="./images/header/hero-girl-m.png" alt="Девушка ест мороженное" />
+        </picture>
       </div>
     </div>
 
