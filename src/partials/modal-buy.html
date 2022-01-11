@@ -1,0 +1,25 @@
+<div class="backdrop is-hidden" data-modal="buy">
+  <div class="buy">
+    <h2 class="buy__title">Our manager will contact you.</h2>
+    <form class="buy__form" autocomplete="off">
+      <label class="buy__label">
+        <input class="buy__input" type="text" name="name" placeholder=" " required />
+        <span class="buy__text">Name</span>
+      </label>
+      <label class="buy__label">
+        <input class="buy__input" type="tel" name="phone" placeholder=" " required />
+        <span class="buy__text">Phone</span>
+      </label>
+      <label class="buy__label">
+        <textarea class="buy__input buy__input--textarea" name="message" placeholder=" "></textarea>
+        <span class="buy__text">Message</span>
+      </label>
+      <button class="buy__button" type="submit">Call me back</button>
+      <button class="modal-close" type="button" data-modal-close="buy">
+        <svg class="modal-close__icon" width="15" height="15">
+          <use href="./images/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
+</div>
