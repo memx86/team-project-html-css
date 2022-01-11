@@ -24,14 +24,14 @@ function closeModal() {
   refs.modal.classList.add('is-hidden');
   document.body.classList.remove('modal-open');
   refs.closeBtn.removeEventListener('click', closeModal);
+  refs.modal.removeEventListener('click', onBackdropClick);
+  document.removeEventListener('keydown', onEscDown);
 }
 function onBackdropClick(e) {
   if (e.target !== refs.modal) return;
   closeModal();
-  refs.modal.removeEventListener('click', onBackdropClick);
 }
 function onEscDown(e) {
   if (e.code !== 'Escape') return;
   closeModal();
-  document.removeEventListener('keydown', onEscDown);
 }
