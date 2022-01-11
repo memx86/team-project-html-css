@@ -1,5 +1,4 @@
 .products {
-  background-color: var(--text-cl);
   padding-top: 157px;
   padding-bottom: 260px;
 }
@@ -48,6 +47,7 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--bg-first-cl);
+  border-radius: 24px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 40px;
@@ -62,6 +62,15 @@
   color: var(--light-cl);
 }
 
+.products-list__title::before {
+  background-image: url('../images/soft-skills/boy_sm.jpg');
+  background-image: -webkit-image-set(url('../images/soft-skills/boy_sm.webp') 1x);
+  @include mq(retina) {
+    background-image: url('../images/soft-skills/boy_sm@2x.jpg');
+    background-image: -webkit-image-set(url('../images/soft-skills/boy_sm@2x.webp') 2x);
+  }
+}
+
 .products__text {
   font-family: DM Sans;
   font-weight: 700;
@@ -69,5 +78,18 @@
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: var(--light-cl);
+  margin-bottom: 30px;
+}
+
+.products-button {
+  @extend %button-light;
+  min-width: 0px;
+  min-height: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.arrow-right {
 }
