@@ -1,7 +1,7 @@
 // Задать кнопке открытия модального окна аттрибут data-modal-open
 // Задать backdrop модального окна аттрибуты data-modal, class="is-hidden"
 // Задать кнопке закрытия модального окна аттрибут data-modal-close
-// Модальное окно закрывается по клику на кнопку закрытия, пок клику в бэкдроп, по нажатию клавиши "Esc"
+// Модальное окно закрывается по клику на кнопку закрытия, по клику в бэкдроп, по нажатию клавиши "Esc"
 const refs = {
   modal: document.querySelector('[data-modal]'),
   openBtn: document.querySelector('[data-modal-open]'),
