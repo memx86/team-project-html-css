@@ -103,6 +103,7 @@
   width: 209px;
   margin-bottom: 32px;
 }
+
 .mob-menu-container {
   position: absolute;
   top: 0;
@@ -117,8 +118,13 @@
   padding-left: 21px;
   padding-right: 21px;
   background-color: var(--bg-mob-menu);
-  transition: transform 250ms ease;
+  transform: translateY(0);
+  transition: transform 350ms linear;
+  .backdrop.is-hidden & {
+    transform: translateY(100%);
+  }
 }
+
 .mob-menu-nav-list {
   &__item {
     position: relative;
@@ -280,6 +286,9 @@
   }
   &__number {
     position: relative;
+    transition-property: transform;
+    transition-duration: 800ms;
+    transition-timing-function: ease-in-out;
     @extend %title;
     color: var(--accent-cl);
     @include font(28px, 1.14, 400);
@@ -353,16 +362,25 @@
     background-color: var(--light-cl);
     border-radius: 50%;
     border: 1px solid var(--light-cl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include mq(desktop) {
       width: 26px;
       height: 26px;
     }
+  }
+  .hero__icon {
+    fill: var(--accent-cl);
   }
   &__img-girl {
     position: absolute;
     right: 0;
     bottom: -27px;
   }
+}
+.hero__top-right:hover .hero__number {
+  transform: scale(1.5);
 }
 
 // ---------------КОНТЕЙНЕР ДЛЯ ДВУХ ФОТО-------------
