@@ -1,3 +1,3 @@
-Team 3 project HTML-CSS
+Ewok-team project HTML-CSS
 
 https://memx86.github.io/team-project-html-css/
