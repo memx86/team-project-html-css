@@ -182,14 +182,24 @@
     }
   }
 
-  // Убираем стилизированные кнопки по умолчанию
+  // Cтилизированные кнопки слайдера десктопа
 
   &__button-prev:after {
     content: '';
+    @include mq(desktop) {
+      content: 'prev';
+    }
   }
 
   &__button-next:after {
     content: '';
+    @include mq(desktop) {
+      content: 'next';
+    }
+  }
+  .review__button-next.swiper-button-next,
+  .review__button-prev.swiper-button-prev {
+    color: var(--accent-cl);
   }
 
   // Стили указателей страниц
