@@ -1,0 +1,98 @@
+.advantages {
+  background-color: var(--bg-dark-cl);
+  padding-top: 39px;
+  padding-bottom: 97px;
+  @include mq(tablet) {
+    padding-top: 66px;
+    padding-bottom: 140px;
+  }
+
+  &__list {
+    max-width: 320px;
+    padding-left: 20px;
+    padding-right: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 1px solid green;
+    @include mq(tablet) {
+      display: flex;
+      max-width: 772px;
+      padding-left: 36px;
+      padding-right: 76px;
+    }
+  }
+
+  &__item {
+    max-width: 230px;
+    height: 156px;
+    outline: 1px solid blue;
+    position: relative;
+    @include mq(tablet) {
+      max-width: 180px;
+      margin-left: 60px;
+    }
+  }
+  &__item:first-child {
+    @include mq(tablet) {
+      margin-left: 0;
+    }
+  }
+  &__number {
+    font-family: Titan One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-cl);
+    margin-bottom: 15px;
+    @include mq(tablet) {
+      font-size: 48px;
+      line-height: 1.15;
+      margin-bottom: 13px;
+    }
+  }
+  &__number:before {
+    content: '';
+    display: block;
+    height: 50px;
+    margin-bottom: 16px;
+    @include mq(tablet) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__item:first-child > &__number:before {
+    width: 33px;
+    background-image: url('../images/advantages/icon_1.png');
+  }
+  &__item:nth-child(2) > &__number:before {
+    width: 50px;
+    background-image: url('../images/advantages/icon_2.png');
+  }
+  &__item:last-child > &__number:before {
+    width: 44px;
+    background-image: url('../images/advantages/icon_3.png');
+  }
+
+  &__text {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--dark-cl);
+    position: absolute;
+    bottom: 2px;
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: 1.74;
+      position: static;
+    }
+  }
+  &__wrap-cont {
+    width: 230px;
+    height: 156px;
+  }
+}
