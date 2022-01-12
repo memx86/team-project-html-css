@@ -3,7 +3,7 @@
   padding-bottom: 260px;
 }
 
-.title-products {
+.products__title {
   @extend %title;
   display: flex;
   flex-direction: column;
@@ -22,7 +22,7 @@
   }
 }
 
-.title-products::before {
+.products__title::before {
   content: '100% natural';
   @extend %title;
   font-size: 18px;
@@ -37,7 +37,7 @@
   }
 }
 
-.products-list {
+.products__list {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -17px;
@@ -133,7 +133,7 @@
   }
 }
 
-.products-list__title {
+.item__title {
   @extend %title;
   font-size: 20px;
   text-align: center;
