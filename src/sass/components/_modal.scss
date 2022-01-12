@@ -1,10 +1,25 @@
+.buy-btn.mobile-hiden {
+  @include mq(mobile-only) {
+    display: none;
+  }
+}
+.buy-btn {
+  @extend %button-light;
+  margin-left: auto;
+  margin-right: auto;
+}
+.buy-btn__icon {
+  margin-left: 12px;
+  fill: transparent;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1;
+  z-index: 4;
   margin-left: auto;
   margin-right: auto;
   background-color: rgba(0, 0, 0, 0.2);

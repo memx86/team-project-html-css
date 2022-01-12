@@ -1,17 +1,404 @@
+// ----------------SECTION HEADER--------------
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
   &__container {
+    padding-top: 6px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--bg-first-cl);
+    background-color: transparent;
+    @include mq(tablet) {
+      padding-top: 38px;
+    }
+    @include mq(desktop) {
+      max-width: 1230px;
+      justify-content: start;
+    }
   }
   &__line {
     display: block;
     width: 20px;
-    height: 1px;
+    height: 2px;
     background-color: var(--accent-cl);
     &:not(:last-child) {
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
+    transition: transform 250ms linear, background-color 250ms linear;
+  }
+  &__buy-btn {
+    margin-right: 0;
+    margin-left: 30px;
+  }
+}
+.logo {
+  margin-right: 61px;
+  @include mq(tablet) {
+    margin-right: 291px;
+  }
+  @include mq(desktop) {
+    margin-right: 110px;
+  }
+}
+.nav {
+  margin-right: 110px;
+  @include mq(not-desktop) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__item {
+    color: var(--light-cl);
+    @include font(16px, 1.31, 700);
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+    &:nth-child(1) {
+      color: var(--accent-cl);
+    }
+  }
+  &__link {
+    z-index: 2;
+  }
+}
+//-------Бургер для мобильного меню
+.burger__btn {
+  border: 1px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 5;
+  @include mq(desktop) {
+    display: none;
+  }
+}
+.burger__btn.is-open .header__line {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  background-color: var(--light-cl);
+}
+.burger__btn.is-open .header__line-second {
+  display: none;
+}
+.burger__btn.is-open .header__line-first {
+  transform: rotate(45deg) translateX(5px);
+  transform-origin: top left;
+}
+.burger__btn.is-open .header__line-third {
+  transform: rotate(-45deg) translateX(-5px);
+  transform-origin: top right;
+}
+
+// --------Мобильно меню, при нажатии на бургер
+
+.buy-btn-mobile {
+  width: 209px;
+  margin-bottom: 32px;
+}
+.mob-menu-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 60px;
+  padding-left: 21px;
+  padding-right: 21px;
+  background-color: var(--bg-mob-menu);
+  transition: transform 250ms ease;
+}
+.mob-menu-nav-list {
+  &__item {
+    position: relative;
+    color: var(--light-cl);
+    @include font(14px, 1.28, 700);
+    letter-spacing: 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+    &:nth-child(1) {
+      color: var(--accent-cl);
+      &::before {
+        content: '';
+        width: 250px;
+        height: 1px;
+        background-color: var(--mob-line);
+        position: absolute;
+        left: -21px;
+        top: -12px;
+      }
+    }
+    &:hover,
+    &:focus {
+      color: var(--accent-cl);
+    }
+    &::after {
+      content: '';
+      width: 250px;
+      height: 1px;
+      background-color: var(--mob-line);
+      position: absolute;
+      left: -21px;
+      bottom: -12px;
+    }
+  }
+  &__link {
+    position: relative;
+  }
+}
+// ----------------SECTION HERO--------------
+.hero {
+  position: relative;
+  background-color: var(--bg-first-cl);
+  padding-top: 56px;
+  height: 502px;
+  @include mq(tablet) {
+    position: static;
+    padding-top: 87px;
+    height: 399px;
+  }
+  @include mq(desktop) {
+    padding-top: 141px;
+    height: 655px;
+  }
+  &__container {
+    height: 100%;
+    padding-top: 137px;
+    @include mq(tablet) {
+      position: relative;
+      padding-top: 15px;
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include mq(tablet) {
+      margin-bottom: 19px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 56px;
+    }
+  }
+  &__top-left {
+    width: 218px;
+    @include mq(tablet) {
+      width: 162px;
+    }
+    @include mq(desktop) {
+      width: 277px;
+      padding-top: 15px;
+    }
+  }
+  &__title {
+    @extend %title;
+    color: var(--light-cl);
+    @include font(26px, 1.15, 400);
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+    @include mq(tablet) {
+      @include font(22px, 1.14, 400);
+    }
+    @include mq(desktop) {
+      @include font(38px, 1.16, 400);
+      margin-bottom: 25px;
+    }
+  }
+  &__title--accent {
+    color: var(--accent-cl);
+    @include font(48px, 0.965, 400);
+    letter-spacing: 0.04em;
+    @include mq(tablet) {
+      @include font(34px, 0.905, 400);
+    }
+    @include mq(desktop) {
+      @include font(58px, 0.905, 400);
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  &__buttons-dark {
+    @extend %button-dark;
+    @include font(8px, 1.25, 400);
+    min-width: 63px;
+    min-height: 24px;
+    margin-right: 9px;
+    @include mq(desktop) {
+      @include font(14px, 1.29, 400);
+      min-width: 104px;
+      min-height: 40px;
+      margin-right: 15px;
+    }
+  }
+  &__buttons-light {
+    @extend %button-light;
+    @include font(8px, 1.25, 400);
+    min-width: 83px;
+    min-height: 24px;
+    @include mq(desktop) {
+      @include font(14px, 1.29, 400);
+      min-width: 138px;
+      min-height: 40px;
+    }
+  }
+  &__top-right {
+    @include mq(mobile-only) {
+      display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 51px;
+    @include font(8px, 1.25, 400);
+    letter-spacing: 0;
+    color: var(--light-cl);
+    @include mq(desktop) {
+      @include font(14px, 1.29, 400);
+      width: 92px;
+    }
+  }
+  &__number {
+    position: relative;
+    @extend %title;
+    color: var(--accent-cl);
+    @include font(28px, 1.14, 400);
+    @include mq(desktop) {
+      @include font(46px, 1.15, 400);
+    }
+    &-second {
+      margin-top: 13px;
+      @include mq(desktop) {
+        margin-top: 20px;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 22px;
+      top: -3px;
+      z-index: -1;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--light-cl);
+      @include mq(desktop) {
+        left: 43px;
+        top: -3px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  &__bottom {
+    position: relative;
+    @include mq(mobile-only) {
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  &__img-wrap {
+    position: relative;
+    width: 120px;
+    height: 126px;
+
+    @include mq(desktop) {
+      width: 188px;
+      height: 191px;
+    }
+  }
+  &__img-milk {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__description {
+    display: block;
+    width: 114px;
+    @include font(8px, 1.5, 400);
+    letter-spacing: 0;
+    color: var(--light-cl);
+    margin-bottom: 7px;
+    @include mq(desktop) {
+      width: 200px;
+      @include font(14px, 1.4, 400);
+      margin-bottom: 20px;
+    }
+  }
+  &__img-arrow {
+    width: 18px;
+    height: 18px;
+    background-color: var(--light-cl);
+    border-radius: 50%;
+    border: 1px solid var(--light-cl);
+    @include mq(desktop) {
+      width: 26px;
+      height: 26px;
+    }
+  }
+  &__img-girl {
+    position: absolute;
+    right: 0;
+    bottom: -27px;
+  }
+}
+
+// ---------------КОНТЕЙНЕР ДЛЯ ДВУХ ФОТО-------------
+.hero__img {
+  position: absolute;
+  top: 83px;
+  right: 0;
+  width: 289px;
+  height: 100%;
+  @include mq(tablet) {
+    top: -56px;
+    right: 122px;
+    width: 324px;
+    height: 100%;
+  }
+  @include mq(desktop) {
+    top: -89px;
+    right: 152px;
+    width: 538px;
+    height: 100%;
+  }
+  &-ice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(50%, 9px);
+    @include mq(tablet) {
+      transform: translate(40%, 32px);
+    }
+    @include mq(desktop) {
+      transform: translate(40%, 46px);
+    }
+  }
+  &-ellipse {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
