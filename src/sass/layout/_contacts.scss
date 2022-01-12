@@ -1,3 +1,56 @@
+.contacts {
+  background-color: #fff5f6;
+
+  padding-top: 43px;
+  padding-bottom: 56px;
+
+  @include mq(tablet-only) {
+    padding-top: 60px;
+    padding-bottom: 79px;
+  }
+  @include mq(desktop) {
+    padding-top: 66px;
+    padding-bottom: 83px;
+  }
+}
+
+.button {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  min-width: 160px;
+  min-height: 44px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  border: 1px solid transparent;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: background-color 250ms linear, color 250ms linear;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq(tablet-only) {
+    margin-left: 0;
+    margin-right: 0;
+
+    width: 198px;
+    height: 44px;
+  }
+}
+
+.contacts__wrap {
+  @include mq(tablet-only) {
+    display: flex;
+    // margin-bottom: 81px;
+  }
+  @include mq(desktop) {
+    display: flex;
+  }
+}
+
 .contacts__card {
   width: 220px;
   height: 427px;
@@ -14,6 +67,25 @@
 
   margin-left: auto;
   margin-right: auto;
+
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+
+  @include mq(tablet-only) {
+    width: 220px;
+    height: 544px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 31px;
+    padding-right: 31px;
+
+    margin-right: 20px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .contacts__pre-title.cafe {
@@ -35,6 +107,13 @@
   text-transform: uppercase;
 
   border-radius: 4px;
+
+  @include mq(tablet-only) {
+    width: 73px;
+    height: 28px;
+
+    font-size: 16px;
+  }
 }
 
 .contacts__pre-title.foodtruck {
@@ -55,6 +134,13 @@
   text-transform: uppercase;
 
   border-radius: 4px;
+
+  @include mq(tablet-only) {
+    width: 138px;
+    height: 28px;
+
+    font-size: 16px;
+  }
 }
 
 .contacts__city {
@@ -63,12 +149,20 @@
   line-height: 1.86;
 
   margin-bottom: 10px;
+
+  @include mq(tablet-only) {
+    font-size: 14px;
+  }
 }
 
 .contacts__days {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
+
+  @include mq(tablet-only) {
+    font-size: 14px;
+  }
 }
 
 .contacts__text {
@@ -78,6 +172,13 @@
   line-height: 1.5;
 
   margin-bottom: 50px;
+
+  @include mq(tablet-only) {
+    font-size: 14px;
+    line-height: 1.66;
+
+    margin-bottom: 60px;
+  }
 }
 
 .contacts__first {
@@ -92,19 +193,13 @@
 
     position: absolute;
 
-    top: 135%;
+    top: 125%;
+
+    @include mq(tablet-only) {
+      width: 157px;
+    }
   }
 }
-
-/* .contacts__text::after {
-  content: "";
-  width: 179px;
-  height: 1px;
-  background-color: #e1e1e1;
-  position: absolute;
-  margin-top: 25px;
-  top: 100%;
-} */
 
 .contacts__time {
   font-weight: 500;
@@ -114,6 +209,10 @@
   color: var(--title-light-cl);
   :not(:last-child) {
     margin-bottom: 10px;
+  }
+
+  @include mq(tablet-only) {
+    font-size: 14px;
   }
 }
 
@@ -125,6 +224,11 @@
   color: var(--text-cl);
 
   display: block;
+
+  @include mq(tablet-only) {
+    font-size: 14px;
+    line-height: 1.83;
+  }
 }
 
 .contacts__second {
@@ -141,6 +245,10 @@
     position: absolute;
 
     top: 125%;
+
+    @include mq(tablet-only) {
+      width: 157px;
+    }
   }
 }
 
@@ -150,6 +258,11 @@
   line-height: 1.5;
 
   color: var(--text-cl);
+
+  @include mq(tablet-only) {
+    font-size: 14px;
+    line-height: 1.83;
+  }
 }
 
 .location-button {
@@ -158,9 +271,26 @@
 
   margin-top: 54px;
   margin-bottom: 10px;
+  @include mq(tablet-only) {
+    margin-right: 15px;
+    margin-left: auto;
+  }
 }
 
 .franchise-button {
   background-color: var(--light-cl);
   color: var(--accent-cl);
+  @include mq(tablet-only) {
+    margin-right: auto;
+  }
+}
+
+.contacts__button {
+  @include mq(tablet-only) {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+    margin: 0;
+  }
 }
