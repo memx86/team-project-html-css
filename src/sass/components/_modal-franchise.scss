@@ -1,8 +1,4 @@
-// Задать кнопке открытия модального окна аттрибут data-modal-open="buy"
-// Задать backdrop модального окна аттрибуты data-modal="buy", class="is-hidden"
-// Задать кнопке закрытия модального окна аттрибут data-modal-close="buy"
-// Модальное окно закрывается по клику на кнопку закрытия, по клику в бэкдроп, по нажатию клавиши "Esc"
-.buy {
+.franchise {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11,6 +7,12 @@
   min-height: 320px;
   @include mq(mobile) {
     max-width: calc(460px + 13vw);
+  }
+  @include mq(tablet-only) {
+    max-width: calc(748px + 13vw);
+  }
+  @include mq(desktop) {
+    max-width: calc(1260px + 13vw);
   }
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms linear;
@@ -22,8 +24,12 @@
     transform: translate(-50%, -50%) scale(1.5);
   }
 }
-.buy__title {
+.franchise__title {
   @extend %title;
+  margin-bottom: 1em;
   font-size: calc(16px + 1vw);
   text-align: center;
+}
+.franchise__text {
+  font-size: calc(10px + 1vw);
 }
