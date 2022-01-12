@@ -1,6 +1,13 @@
 .products {
-  padding-top: 157px;
-  padding-bottom: 260px;
+  padding-top: 121px;
+  padding-bottom: 98px;
+  @include mq(tablet) {
+    padding-bottom: 112px;
+  }
+  @include mq(desktop) {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
 }
 
 .products__title {
@@ -42,11 +49,9 @@
   flex-wrap: wrap;
   @include mq(tablet) {
     margin-right: -20px;
-    margin-bottom: -130px;
   }
   @include mq(desktop) {
     margin-right: -22px;
-    margin-bottom: -130px;
   }
 }
 
@@ -80,10 +85,15 @@
   @include mq(tablet) {
     width: 220px;
     margin-right: 20px;
-    margin-bottom: 0px;
     padding-top: 152px;
     padding-left: 11px;
     padding-right: 11px;
+    &:nth-child(1) {
+      margin-bottom: 0;
+    }
+    &:nth-child(2) {
+      margin-bottom: 0;
+    }
   }
   @include mq(desktop) {
     width: 335px;
