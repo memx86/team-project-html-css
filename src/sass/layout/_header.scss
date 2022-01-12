@@ -117,7 +117,6 @@
   padding-left: 21px;
   padding-right: 21px;
   background-color: var(--bg-mob-menu);
-  transform: translateX(-5%);
   transition: transform 250ms ease;
 }
 .mob-menu-nav-list {
@@ -346,6 +345,17 @@
       width: 200px;
       @include font(14px, 1.4, 400);
       margin-bottom: 20px;
+    }
+  }
+  &__img-arrow {
+    width: 18px;
+    height: 18px;
+    background-color: var(--light-cl);
+    border-radius: 50%;
+    border: 1px solid var(--light-cl);
+    @include mq(desktop) {
+      width: 26px;
+      height: 26px;
     }
   }
   &__img-girl {
