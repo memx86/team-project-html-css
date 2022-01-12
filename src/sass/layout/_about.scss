@@ -1,0 +1,187 @@
+.about {
+  background-color: var(--bg-dark-cl);
+  padding-top: 125px;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(tablet) {
+    padding-top: 130px;
+    padding-bottom: 66px;
+  }
+  @include mq(tablet) {
+    padding-top: 125px;
+    padding-bottom: 0;
+  }
+
+  &__wrap-mobile {
+    max-width: 320px;
+    height: 133px;
+
+    margin: 0 auto;
+
+    outline: 1px solid green;
+    background-image: url('../images/about/milk_mob.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include mq(retina) {
+      background-image: url('../images/about/milk_mob@2x.png');
+    }
+    @include mq(tablet) {
+      display: none;
+    }
+  }
+  &__wrap-desktop {
+    @include mq(desktop) {
+      display: block;
+      max-width: 1282px;
+      background-image: url('../images/about/milk_desk.png');
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include mq(retina) {
+        background-image: url('../images/about/milk_desk@2x.png');
+      }
+    }
+  }
+
+  &__container {
+    outline: 1px solid red;
+    position: relative;
+  }
+  &__title-head {
+    @extend %title;
+    font-size: 18px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--title-light-cl);
+    margin-bottom: 15px;
+
+    @include mq(tablet) {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    @include mq(desktop) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
+  }
+  &__title {
+    @extend %title;
+    font-size: 34px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: var(--accent-cl);
+    margin-bottom: 26px;
+    @include mq(tablet) {
+      font-size: 48px;
+      line-height: 1.15;
+      letter-spacing: 0.04em;
+      margin-bottom: 0;
+    }
+    @include mq(desktop) {
+      font-size: 58px;
+      line-height: 1.14;
+      letter-spacing: 0.06em;
+      margin-bottom: 55px;
+    }
+  }
+  &__image {
+    @include mq(tablet) {
+      margin-right: 17px;
+    }
+    @include mq(desktop) {
+      margin-right: 74px;
+      margin-bottom: 65px;
+    }
+  }
+  &__text {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+    color: var(--dark-cl);
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 46px;
+    margin-bottom: 99px;
+
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: 1.76;
+      width: 340px;
+      margin: 0;
+      margin-top: 100px;
+      margin-bottom: 49px;
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: 1.76;
+      letter-spacing: 0.04em;
+      width: 463px;
+      margin: 0;
+      padding-top: 51px;
+    }
+  }
+  &__text-two {
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+    letter-spacing: 0.04em;
+    color: var(--text-cl);
+    width: 220px;
+
+    position: absolute;
+    bottom: -37px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: 1.76;
+      position: static;
+      transform: none;
+      width: 340px;
+      margin-bottom: 62px;
+    }
+    @include mq(desktop) {
+      font-size: 14px;
+      font-size: 14px;
+      line-height: 1.94;
+      letter-spacing: 0.04em;
+      width: 463px;
+      height: 155px;
+      margin-top: 35px;
+      margin-bottom: 45px;
+    }
+  }
+  &__button {
+    @extend %button-light;
+    width: 176px;
+    align-items: center;
+    margin-top: 17px;
+    margin-left: 30px;
+    @include mq(tablet) {
+      margin-left: 357px;
+    }
+    @include mq(desktop) {
+      margin: 0;
+      position: absolute;
+      bottom: 172px;
+      right: 302px;
+    }
+  }
+  &__wrap-flex {
+    @include mq(tablet) {
+      display: flex;
+    }
+  }
+  &__icon {
+    display: block;
+    margin-left: 13.62px;
+  }
+}

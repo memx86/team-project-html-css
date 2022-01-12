@@ -1,0 +1,63 @@
+<section id="about-us" class="about">
+  <div class="about__container container">
+    <p class="about__title-head">Tradition and love</p>
+    <h2 class="about__title">How it`s made</h2>
+    <div class="about__wrap-desktop">
+      <div class="about__wrap-flex">
+        <picture>
+          <source
+            media="(min-width: 1280px)"
+            srcset="./images/about/cow_desk.png 1x, ./images/about/cow_desk@2x.png 2x"
+            type="image/png"
+          />
+          <source
+            media="(min-width:768px)"
+            srcset="./images/about/cow_tab.png 1x, ./images/about/cow_tab@2x.png 2x"
+            type="image/png"
+          />
+          <source
+            media="(min-width:320px)"
+            srcset="./images/about/cow_mob.png 1x, ./images/about/cow_mob@2x.png 2x"
+            type="image/png"
+          />
+
+          <img class="about__image" src="./images/about/cow_mob.png" alt="Cow" />
+        </picture>
+
+        <div class="about__wrap-tablet">
+          <p class="about__text">
+            Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
+            lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+          </p>
+
+          <p class="about__text-two">
+            Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus
+            orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat
+            urna maximus. Cras massa nibh, tincidunt.<br /><br />
+            Aliquam erat volutpat. Aenean accumsan.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="about__wrap-mobile"></div>
+    <button class="about__button" type="button" data-modal-open="more">
+      Read more
+      <svg
+        class="about__icon"
+        width="8"
+        height="10"
+        viewBox="0 0 8 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.61639 1L6.04407 5L1.61639 9"
+          stroke="#D41443"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+</section>
