@@ -1,0 +1,166 @@
+.contacts__card {
+  width: 220px;
+  height: 427px;
+
+  background-color: var(--light-cl);
+  border-radius: 24px;
+
+  margin-bottom: 20px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 43px;
+  padding-bottom: 43px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contacts__pre-title.cafe {
+  width: 80px;
+  height: 16px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  text-align: center;
+
+  padding-bottom: 20px;
+
+  margin-bottom: 25px;
+
+  color: var(--light-cl);
+  background-color: var(--bg-second-cl);
+
+  text-transform: uppercase;
+
+  border-radius: 4px;
+}
+
+.contacts__pre-title.foodtruck {
+  width: 130px;
+  height: 16px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  text-align: center;
+
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+
+  color: var(--light-cl);
+  background-color: var(--bg-third-cl);
+
+  text-transform: uppercase;
+
+  border-radius: 4px;
+}
+
+.contacts__city {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+
+  margin-bottom: 10px;
+}
+
+.contacts__days {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+}
+
+.contacts__text {
+  color: var(--text-cl);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+
+  margin-bottom: 50px;
+}
+
+.contacts__first {
+  position: relative;
+  &:after {
+    content: '';
+
+    width: 179px;
+    height: 1px;
+
+    background-color: var(--reviews-cl);
+
+    position: absolute;
+
+    top: 135%;
+  }
+}
+
+/* .contacts__text::after {
+  content: "";
+  width: 179px;
+  height: 1px;
+  background-color: #e1e1e1;
+  position: absolute;
+  margin-top: 25px;
+  top: 100%;
+} */
+
+.contacts__time {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+
+  color: var(--title-light-cl);
+  :not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__phone {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: var(--text-cl);
+
+  display: block;
+}
+
+.contacts__second {
+  position: relative;
+  margin-bottom: 50px;
+  &:after {
+    content: '';
+
+    width: 179px;
+    height: 1px;
+
+    background-color: var(--reviews-cl);
+
+    position: absolute;
+
+    top: 125%;
+  }
+}
+
+.contacts__mail {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+
+  color: var(--text-cl);
+}
+
+.location-button {
+  color: var(--light-cl);
+  background-color: var(--accent-cl);
+
+  margin-top: 54px;
+  margin-bottom: 10px;
+}
+
+.franchise-button {
+  background-color: var(--light-cl);
+  color: var(--accent-cl);
+}
