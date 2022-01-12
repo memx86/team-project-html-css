@@ -11,7 +11,7 @@
   text-align: center;
   letter-spacing: 0.04em;
   color: var(--accent-cl);
-  margin-bottom: 31px;
+  margin-bottom: 144px;
   @include mq(tablet) {
     font-size: 48px;
     margin-bottom: 39px;
@@ -40,6 +40,7 @@
 .products-list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -17px;
   @include mq(tablet) {
     margin-right: -20px;
   }
@@ -57,7 +58,17 @@
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 40px;
-  margin-bottom: 17px;
+  &:not(:last-child) {
+    margin-bottom: 130px;
+  }
+  padding-top: 161px;
+  position: relative;
+  &::before {
+    position: absolute;
+    top: -113px;
+    width: 249px;
+    height: 252px;
+  }
   @include mq(tablet) {
     width: 220px;
     margin-right: 20px;
@@ -68,18 +79,7 @@
   }
 }
 
-.products-list__title {
-  @extend %title;
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: var(--light-cl);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.products-list__title {
+.products__item {
   &:nth-child(1)::before {
     content: '';
     background-image: url('../images/products/small/icecream1-s.png');
@@ -97,46 +97,51 @@
       background-image: -webkit-image-set(url('../images/products/desktop/icecream1-l@2x.webp') 2x);
     }
   }
-  // &:nth-child(2)::before {
-  //   content: '';
-  //   background-image: url('./images/products/small/icecream2-s.png');
-  //   background-image: -webkit-image-set(url('./images/products/small/icecream2-s.png') 1x);
-  //   @include mq(retina) {
-  //     background-image: url('./images/products/small/icecream2-s.png');
-  //     background-image: -webkit-image-set(url('./images/products/small/icecream2-s@2x.webp') 2x);
-  //   }
-  //   @include mq(tablet) {
-  //     background-image: url('./images/products/tablet/icecream2-m.png');
-  //     background-image: -webkit-image-set(url('./images/products/tablet/icecream2-m@2x.webp') 2x);
-  //   }
-  //   @include mq(desktop) {
-  //     background-image: url('./images/products/desktop/icecream2-l.png');
-  //     background-image: -webkit-image-set(url('./images/products/desktop/icecream2-l@2x.webp') 2x);
-  //   }
-  // }
-  // &:nth-child(3)::before {
-  //   content: '';
-  //   background-image: url('./images/products/small/icecream3-s.png');
-  //   background-image: -webkit-image-set(url('./images/products/small/icecream3-s.png') 1x);
-  //   @include mq(retina) {
-  //     background-image: url('./images/products/small/icecream3-s.png');
-  //     background-image: -webkit-image-set(url('./images/products/small/icecream3-s@2x.webp') 2x);
-  //   }
-  //   @include mq(tablet) {
-  //     background-image: url('./images/products/tablet/icecream3-m.png');
-  //     background-image: -webkit-image-set(url('./images/products/tablet/icecream3-m@2x.webp') 2x);
-  //   }
-  //   @include mq(desktop) {
-  //     background-image: url('./images/products/desktop/icecream3-l.png');
-  //     background-image: -webkit-image-set(url('./images/products/desktop/icecream3-l@2x.webp') 2x);
-  //   }
-  // }
-  &::after {
-    content: '...';
-    background-image: url('../images/sprite.svg#dots');
-    width: 20px;
-    text-align: center;
+  &:nth-child(2)::before {
+    content: '';
+    background-image: url('../images/products/small/icecream2-s.png');
+    background-image: -webkit-image-set(url('../images/products/small/icecream2-s.png') 1x);
+    @include mq(retina) {
+      background-image: url('../images/products/small/icecream2-s.png');
+      background-image: -webkit-image-set(url('../images/products/small/icecream2-s@2x.webp') 2x);
+    }
+    @include mq(tablet) {
+      background-image: url('../images/products/tablet/icecream2-m.png');
+      background-image: -webkit-image-set(url('../images/products/tablet/icecream2-m@2x.webp') 2x);
+    }
+    @include mq(desktop) {
+      background-image: url('../images/products/desktop/icecream2-l.png');
+      background-image: -webkit-image-set(url('../images/products/desktop/icecream2-l@2x.webp') 2x);
+    }
   }
+  &:nth-child(3)::before {
+    content: '';
+    background-image: url('../images/products/small/icecream3-s.png');
+    background-image: -webkit-image-set(url('../images/products/small/icecream3-s.png') 1x);
+    @include mq(retina) {
+      background-image: url('../images/products/small/icecream3-s.png');
+      background-image: -webkit-image-set(url('../images/products/small/icecream3-s@2x.webp') 2x);
+    }
+    @include mq(tablet) {
+      background-image: url('../images/products/tablet/icecream3-m.png');
+      background-image: -webkit-image-set(url('../images/products/tablet/icecream3-m@2x.webp') 2x);
+    }
+    @include mq(desktop) {
+      background-image: url('../images/products/desktop/icecream3-l.png');
+      background-image: -webkit-image-set(url('../images/products/desktop/icecream3-l@2x.webp') 2x);
+    }
+  }
+}
+
+.products-list__title {
+  @extend %title;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--light-cl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .products__text {
