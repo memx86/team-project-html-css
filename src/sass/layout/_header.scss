@@ -79,66 +79,75 @@
   }
 }
 // --------Мобильно меню, при нажатии на бургер
-// .backdrop {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   background-color: var(--bg-mob-menu);
-//   padding-top: 60px;
-//   padding-left: 21px;
-//   z-index: 4;
-//   transition-property: transform;
-//   transition-duration: 500ms;
-//   transition-timing-function: linear;
-//   @include mq(desktop) {
-//     display: none;
-//   }
-//   &.is-hidden {
-//     opacity: 0;
-//     pointer-events: none;
-//     visibility: hidden;
-//     transform: rotate(180deg);
-//   }
-// }
-.menu-close-btn {
-  position: absolute;
+
+.modal-close.menu-close-btn {
   display: block;
   top: 23px;
   right: 28px;
-  width: 14px;
-  height: 14px;
   border: none;
   background-color: transparent;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--light-cl);
   &:hover {
     color: var(--accent-cl);
   }
 }
+
+.buy-btn-mobile {
+  width: 209px;
+  margin-bottom: 32px;
+}
 .mob-menu-container {
+  position: relative;
+  z-index: 4;
+  width: 250px;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-top: 60px;
+  padding-left: 21px;
+  padding-right: 21px;
+  background-color: var(--bg-mob-menu);
 }
 .mob-menu-nav-list {
   &__item {
+    position: relative;
+    color: var(--light-cl);
+    @include font(14px, 1.28, 700);
+    letter-spacing: 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:not(:last-child) {
       margin-bottom: 22px;
     }
-  }
-  &__link {
-    @include font(14px, 1.28, 700);
-    letter-spacing: 0;
-    color: var(--light-cl);
-    position: relative;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    color: inherit;
+    &:nth-child(1) {
+      color: var(--accent-cl);
+      &::before {
+        content: '';
+        width: 250px;
+        height: 1px;
+        background-color: var(--mob-line);
+        position: absolute;
+        left: -21px;
+        top: -12px;
+      }
+    }
     &:hover,
     &:focus {
       color: var(--accent-cl);
     }
+    &::after {
+      content: '';
+      width: 250px;
+      height: 1px;
+      background-color: var(--mob-line);
+      position: absolute;
+      left: -21px;
+      bottom: -12px;
+    }
+  }
+  &__link {
+    position: relative;
   }
 }
 // ----------------SECTION HERO--------------
