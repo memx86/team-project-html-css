@@ -6,6 +6,13 @@
     padding-top: 66px;
     padding-bottom: 140px;
   }
+  @include mq(tablet) {
+    padding-top: 0px;
+    padding-bottom: 139px;
+  }
+  &__container {
+    outline: 1px solid red;
+  }
 
   &__list {
     max-width: 320px;
@@ -16,9 +23,12 @@
     outline: 1px solid green;
     @include mq(tablet) {
       display: flex;
-      max-width: 772px;
-      padding-left: 36px;
-      padding-right: 76px;
+      max-width: 660px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @include mq(desktop) {
+      max-width: 1050px;
     }
   }
 
@@ -29,7 +39,13 @@
     position: relative;
     @include mq(tablet) {
       max-width: 180px;
+      height: 226px;
       margin-left: 60px;
+    }
+    @include mq(desktop) {
+      max-width: 330px;
+      height: 222px;
+      margin-left: 30px;
     }
   }
   &__item:first-child {
@@ -52,6 +68,11 @@
       line-height: 1.15;
       margin-bottom: 13px;
     }
+    @include mq(desktop) {
+      font-size: 58px;
+      line-height: 1.14;
+      margin-bottom: 15px;
+    }
   }
   &__number:before {
     content: '';
@@ -60,6 +81,9 @@
     margin-bottom: 16px;
     @include mq(tablet) {
       margin-bottom: 36px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 40px;
     }
   }
 
@@ -90,9 +114,10 @@
       line-height: 1.74;
       position: static;
     }
-  }
-  &__wrap-cont {
-    width: 230px;
-    height: 156px;
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: 1.76;
+      letter-spacing: 0.02em;
+    }
   }
 }
