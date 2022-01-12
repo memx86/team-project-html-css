@@ -1,7 +1,7 @@
 <!-- SECTION HEADER -->
 <header class="header">
   <div class="header__container container">
-    <a class="logo link" href="" id="logo">
+    <a class="logo link" href="">
       <picture>
         <source
           srcset="./images/header/logo-l.webp 1x, ./images/header/logo-l@2x.webp 2x"
@@ -33,24 +33,61 @@
           type="image/png"
           media="(min-width: 320px)"
         />
-        <img src="./images/header/logo-l.png" alt="Логотип ice cream" />
+        <img src="./images/header/logo-s.png" alt="Логотип ice cream" />
       </picture>
     </a>
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item"><a href="#logo" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="" class="nav__link">Home</a></li>
         <li class="nav__item"><a href="#about" class="nav__link">About us</a></li>
         <li class="nav__item"><a href="#advantages" class="nav__link">How it&#39;s made?</a></li>
         <li class="nav__item"><a href="#products" class="nav__link">Our products</a></li>
         <li class="nav__item"><a href="#contacts" class="nav__link">Contact</a></li>
       </ul>
     </nav>
-    <button type="button" class="burger__btn">
+    <!-- Бургер для мобильного меню -->
+    <button type="button" class="burger__btn" data-menu-button>
       <span class="header__line"></span>
       <span class="header__line"></span>
       <span class="header__line"></span>
     </button>
-    <button type="button" class="buy-btn header__buy-btn" data-modal-open>
+    <!-- Мобильно меню, при нажатии на бургер -->
+    <div class="backdrop is-hidden" data-menu>
+      <div class="mob-menu-container">
+        <button type="button" class="menu-close-btn modal-close" data-modal-close>
+          <svg
+            class="header-btn__icon"
+            width="14"
+            height="14"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="header-btn__close-mob" href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <!-- <button type="button" class="buy-btn header__buy-btn" data-modal-open="buy">
+          Buy now
+          <svg class="buy-btn__icon" width="8" height="8">
+            <use href="./images/sprite.svg#bracket-right"></use>
+          </svg>
+        </button> -->
+        <ul class="mob-menu-nav-list">
+          <li class="mob-menu-nav-list__item">
+            <a class="mob-menu-nav-list__link" href="" data-mobile-link>Home</a>
+          </li>
+          <li class="mob-menu-nav-list__item">
+            <a class="mob-menu-nav-list__link" href="" data-mobile-link>About us</a>
+          </li>
+          <li class="mob-menu-nav-list__item">
+            <a class="mob-menu-nav-list__link" href="" data-mobile-link>How it&#39;s made?</a>
+          </li>
+          <li class="mob-menu-nav-list__item">
+            <a class="mob-menu-nav-list__link" href="" data-mobile-link>Our products</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Button BUY NOW -->
+    <button type="button" class="buy-btn header__buy-btn" data-modal-open="buy">
       Buy now
       <svg class="buy-btn__icon" width="8" height="8">
         <use href="./images/sprite.svg#bracket-right"></use>
@@ -69,8 +106,8 @@
             <span class="hero__title--accent">passion</span>
           </h1>
           <ul class="hero__buttons">
-            <li><a href="#products" class="hero__buttons--dark">Products</a></li>
-            <li><a href="#advantages" class="hero__buttons--light">How it&#39;s made?</a></li>
+            <li><a href="#products" class="hero__buttons-dark">Products</a></li>
+            <li><a href="#advantages" class="hero__buttons-light">How it&#39;s made?</a></li>
           </ul>
         </div>
         <div class="hero__top-right">
@@ -160,7 +197,6 @@
         </picture>
       </div>
     </div>
-
     <div class="hero__img">
       <picture class="hero__img-ellipse">
         <source
@@ -193,7 +229,7 @@
           type="image/png"
           media="(min-width: 320px)"
         />
-        <img src="./images/header/ellipse-l.png" alt="Круг розового цвета" />
+        <img src="./images/header/ellipse-s.png" alt="Круг розового цвета" />
       </picture>
       <picture class="hero__img-ice">
         <source
@@ -226,7 +262,7 @@
           type="image/png"
           media="(min-width: 320px)"
         />
-        <img src="./images/header/hero-ice-l.png" alt="Рожок с шестью шариками мороженного" />
+        <img src="./images/header/hero-ice-s.png" alt="Рожок с шестью шариками мороженного" />
       </picture>
     </div>
   </div>
