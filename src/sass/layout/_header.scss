@@ -27,6 +27,7 @@
     &:not(:last-child) {
       margin-bottom: 5px;
     }
+    transition: transform 250ms linear, background-color 250ms linear;
   }
   &__buy-btn {
     margin-right: 0;
@@ -73,32 +74,39 @@
   border-radius: 0;
   cursor: pointer;
   background-color: transparent;
-  z-index: 3;
+  z-index: 5;
   @include mq(desktop) {
     display: none;
   }
 }
-// --------Мобильно меню, при нажатии на бургер
-
-.modal-close.menu-close-btn {
-  display: block;
+.burger__btn.is-open .header__line {
+  position: absolute;
   top: 23px;
-  right: 28px;
-  border: none;
-  background-color: transparent;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  color: var(--light-cl);
-  &:hover {
-    color: var(--accent-cl);
-  }
+  right: 23px;
+  background-color: var(--light-cl);
 }
+.burger__btn.is-open .header__line-second {
+  display: none;
+}
+.burger__btn.is-open .header__line-first {
+  transform: rotate(45deg) translateX(5px);
+  transform-origin: top left;
+}
+.burger__btn.is-open .header__line-third {
+  transform: rotate(-45deg) translateX(-5px);
+  transform-origin: top right;
+}
+
+// --------Мобильно меню, при нажатии на бургер
 
 .buy-btn-mobile {
   width: 209px;
   margin-bottom: 32px;
 }
 .mob-menu-container {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
   z-index: 4;
   width: 250px;
   height: 100%;
@@ -109,6 +117,8 @@
   padding-left: 21px;
   padding-right: 21px;
   background-color: var(--bg-mob-menu);
+  transform: translateX(-5%);
+  transition: transform 250ms ease;
 }
 .mob-menu-nav-list {
   &__item {
@@ -175,7 +185,7 @@
   }
   &__content {
     position: relative;
-    z-index: 2;
+    z-index: 1;
   }
   &__top {
     display: flex;
