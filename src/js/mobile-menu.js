@@ -10,8 +10,8 @@ const refs = {
 refs.menuBtn.addEventListener('click', onMenuBtnClick);
 
 function onMenuBtnClick(e) {
-  menuBtnToggle();
-  if (e.currentTarget.classList.contains('is-open')) {
+  if (!e.currentTarget.classList.contains('is-open')) {
+    menuBtnToggle();
     openModal();
     refs.modal.addEventListener('click', onMobileMenuLinkClick);
     refs.modal.addEventListener('click', onBackdropClick);
@@ -25,6 +25,7 @@ function openModal() {
   document.body.classList.add('modal-open');
 }
 function closeModal() {
+  menuBtnToggle();
   refs.modal.classList.add('is-hidden');
   document.body.classList.remove('modal-open');
   refs.modal.removeEventListener('click', onMobileMenuLinkClick);
@@ -34,19 +35,16 @@ function closeModal() {
 function onBackdropClick(e) {
   if (e.target !== refs.modal) return;
   closeModal();
-  menuBtnToggle();
 }
 function onEscDown(e) {
   if (e.code !== 'Escape') return;
   closeModal();
-  menuBtnToggle();
 }
 function onMobileMenuLinkClick(e) {
   if (!e.target.hasAttribute('data-mobile-link')) {
     return;
   }
   closeModal();
-  menuBtnToggle();
 }
 function menuBtnToggle() {
   const expanded = refs.menuBtn.getAttribute('aria-expanded') === 'true' || false;
