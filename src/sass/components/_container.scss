@@ -4,7 +4,7 @@
   padding-left: 10px;
   padding-right: 10px;
   max-width: 300px;
-  @include mq(mobile) {
+  @include mq(s-mobile) {
     max-width: 460px;
   }
   @include mq(tablet-only) {
