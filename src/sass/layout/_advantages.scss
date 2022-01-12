@@ -10,9 +10,6 @@
     padding-top: 0px;
     padding-bottom: 139px;
   }
-  &__container {
-    outline: 1px solid red;
-  }
 
   &__list {
     max-width: 320px;
@@ -20,7 +17,7 @@
     padding-right: 70px;
     margin-left: auto;
     margin-right: auto;
-    outline: 1px solid green;
+
     @include mq(tablet) {
       display: flex;
       max-width: 660px;
@@ -35,7 +32,6 @@
   &__item {
     max-width: 230px;
     height: 156px;
-    outline: 1px solid blue;
     position: relative;
     @include mq(tablet) {
       max-width: 180px;
