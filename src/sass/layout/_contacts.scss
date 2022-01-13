@@ -45,6 +45,9 @@
     margin-right: 0;
   }
 }
+
+// Оборачивающий контейнер
+
 .contacts__container {
   @include mq(mobile) {
     padding-left: 0;
