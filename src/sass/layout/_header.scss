@@ -386,6 +386,9 @@
     top: 0;
     left: 0;
   }
+  &__description-wrap {
+    position: relative;
+  }
   &__description {
     display: block;
     width: 114px;
@@ -425,6 +428,10 @@
       fill: var(--light-cl);
       stroke: var(--light-cl);
     }
+    &:hover + .hero__clue,
+    &:focus + .hero__clue {
+      opacity: 1;
+    }
   }
   .hero__icon {
     fill: var(--accent-cl);
@@ -435,6 +442,19 @@
     position: absolute;
     right: 0;
     bottom: -27px;
+  }
+  &__clue {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    @extend %button;
+    @include font(14px, 1.5, 400);
+    min-width: 0;
+    width: 140px;
+    min-height: 24px;
+    background-color: var(--light-cl);
+    color: var(--accent-cl);
   }
 }
 .hero__number-first:hover {
