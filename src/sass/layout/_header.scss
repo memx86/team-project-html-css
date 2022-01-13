@@ -446,6 +446,7 @@
   &__clue {
     opacity: 0;
     pointer-events: none;
+    transition: opacity 250ms linear;
     position: absolute;
     bottom: 0px;
     left: 20px;
