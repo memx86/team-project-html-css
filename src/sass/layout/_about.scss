@@ -13,22 +13,23 @@
   }
 
   &__wrap-mobile {
-    max-width: 320px;
-    height: 133px;
-
+    max-width: 767px;
+    outline: 1px solid green;
     margin: 0 auto;
 
     background-image: url('../images/about/milk_mob.png');
     background-image: -webkit-image-set(url('../images/about/milk_mob.webp') 1x);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
+    background-position: 0 641px;
 
     @include mq(retina) {
       background-image: url('../images/about/milk_mob@2x.png');
       background-image: -webkit-image-set(url('../images/about/milk_mob@2x.webp') 2x);
     }
     @include mq(tablet) {
-      display: none;
+      background-image: none;
     }
   }
   &__wrap-desktop {
@@ -74,6 +75,9 @@
     text-align: center;
     letter-spacing: 0.04em;
     color: var(--accent-cl);
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 26px;
     @include mq(tablet) {
       font-size: 48px;
@@ -89,6 +93,9 @@
     }
   }
   &__image {
+    margin-bottom: 46px;
+    margin-left: auto;
+    margin-right: auto;
     @include mq(tablet) {
       margin-right: 17px;
     }
@@ -107,8 +114,7 @@
     width: 220px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 46px;
-    margin-bottom: 99px;
+    margin-bottom: 47px;
 
     @include mq(tablet) {
       font-size: 14px;
@@ -136,12 +142,10 @@
     letter-spacing: 0.04em;
     color: var(--text-cl);
     width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 17px;
 
-    position: absolute;
-    bottom: -37px;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
     @include mq(tablet) {
       font-size: 14px;
       line-height: 1.76;
@@ -166,7 +170,8 @@
     width: 176px;
     align-items: center;
     margin-top: 17px;
-    margin-left: 30px;
+    margin-left: auto;
+    margin-right: auto;
     @include mq(tablet) {
       margin-left: 357px;
     }
@@ -177,6 +182,7 @@
       right: 302px;
     }
   }
+
   &__wrap-flex {
     @include mq(tablet) {
       display: flex;
