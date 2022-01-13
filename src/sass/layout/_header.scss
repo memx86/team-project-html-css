@@ -57,10 +57,15 @@
   &__item {
     color: var(--light-cl);
     @include font(16px, 1.31, 700);
+    transition: color 250ms linear;
     &:not(:last-child) {
       margin-right: 35px;
     }
     &:nth-child(1) {
+      color: var(--accent-cl);
+    }
+    &:hover,
+    &:focus {
       color: var(--accent-cl);
     }
   }
@@ -402,6 +407,7 @@
     &:hover .hero__icon,
     &:focus .hero__icon {
       fill: var(--light-cl);
+      stroke: var(--light-cl);
     }
   }
   .hero__icon {
