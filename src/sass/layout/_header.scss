@@ -170,6 +170,12 @@
     position: relative;
   }
 }
+// -----------Button BUY NOW в heder---------
+.buy-btn.mobile-hiden {
+  @include mq(mobile-only) {
+    display: none;
+  }
+}
 // ----------------SECTION HERO--------------
 .hero {
   position: relative;
