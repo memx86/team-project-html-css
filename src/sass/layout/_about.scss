@@ -1,48 +1,37 @@
 .about {
   background-color: var(--bg-dark-cl);
   padding-top: 125px;
-  margin-left: auto;
-  margin-right: auto;
+  outline: 1px solid green;
+  margin: 0;
+
+  background-image: url('../images/about/milk_mob.png');
+  background-image: -webkit-image-set(url('../images/about/milk_mob.webp') 1x);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-position: 0 641px;
+
+  @include mq(retina) {
+    background-image: url('../images/about/milk_mob@2x.png');
+    background-image: -webkit-image-set(url('../images/about/milk_mob@2x.webp') 2x);
+  }
   @include mq(tablet) {
+    background-image: none;
     padding-top: 130px;
     padding-bottom: 66px;
   }
-  @include mq(tablet) {
+  @include mq(desktop) {
     padding-top: 125px;
     padding-bottom: 0;
-  }
 
-  &__wrap-background {
-    max-width: 767px;
-    outline: 1px solid green;
-    margin: 0 auto;
-
-    background-image: url('../images/about/milk_mob.png');
-    background-image: -webkit-image-set(url('../images/about/milk_mob.webp') 1x);
+    background-image: url('../images/about/milk_desk.png');
+    background-image: -webkit-image-set(url('../images/about/milk_desk.webp') 1x);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    background-position: 0 641px;
 
     @include mq(retina) {
-      background-image: url('../images/about/milk_mob@2x.png');
-      background-image: -webkit-image-set(url('../images/about/milk_mob@2x.webp') 2x);
-    }
-    @include mq(tablet) {
-      background-image: none;
-    }
-    @include mq(desktop) {
-      display: block;
-      max-width: 1282px;
-      background-image: url('../images/about/milk_desk.png');
-      background-image: -webkit-image-set(url('../images/about/milk_desk.webp') 1x);
-      background-repeat: no-repeat;
-      background-position: center;
-
-      @include mq(retina) {
-        background-image: url('../images/about/milk_desk@2x.png');
-        background-image: -webkit-image-set(url('../images/about/milk_desk@2x.webp') 2x);
-      }
+      background-image: url('../images/about/milk_desk@2x.png');
+      background-image: -webkit-image-set(url('../images/about/milk_desk@2x.webp') 2x);
     }
   }
 
