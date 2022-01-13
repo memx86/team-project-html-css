@@ -1,0 +1,104 @@
+.gallery__list {
+  gap: 5px;
+  margin: 0 auto;
+  max-width: 300px;
+  @media (min-width: 360px) and (max-width: 767px) {
+    gap: 10px;
+    max-width: 340px;
+  }
+  @include mq(tablet) {
+    gap: 10px;
+  }
+  @include mq(tablet-only) {
+    max-width: 700px;
+  }
+  @include mq(desktop) {
+    max-width: 1050px;
+  }
+}
+.gallery__sizer {
+  width: 30px;
+  height: 30px;
+  @media (min-width: 360px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @include mq(tablet-only) {
+    width: 85px;
+    height: 85px;
+  }
+  @include mq(desktop) {
+    width: 140px;
+    height: 140px;
+  }
+}
+.gallery__item {
+  margin-bottom: 10px;
+  width: 30px;
+  height: 30px;
+  @media (min-width: 360px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @include mq(tablet-only) {
+    width: 85px;
+    height: 85px;
+  }
+  @include mq(desktop) {
+    width: 140px;
+    height: 140px;
+  }
+}
+.gallery__item--width-quarter {
+  width: 7.5px;
+  height: 7.5px;
+  @media (min-width: 360px) {
+    width: 10px;
+    height: 10px;
+  }
+  @include mq(tablet-only) {
+    width: 21px;
+    height: 21px;
+  }
+  @include mq(desktop) {
+    width: 35px;
+    height: 35px;
+  }
+}
+.gallery__item--width-half {
+  width: 15px;
+  height: 15px;
+  @media (min-width: 360px) {
+    width: 20px;
+    height: 20px;
+  }
+  @include mq(tablet-only) {
+    width: 42.5px;
+    height: 42.5px;
+  }
+  @include mq(desktop) {
+    width: 70px;
+    height: 70px;
+  }
+}
+.gallery-item--width2 {
+  width: 60px;
+  height: 60px;
+  @media (min-width: 360px) {
+    width: 80px;
+    height: 80px;
+  }
+  @include mq(tablet-only) {
+    width: 170px;
+    height: 170px;
+  }
+  @include mq(desktop) {
+    width: 280px;
+    height: 280px;
+  }
+}
+.gallery__img {
+  border-radius: 10px;
+}
