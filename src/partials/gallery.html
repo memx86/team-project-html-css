@@ -1,52 +1,8 @@
 <section class="gallery">
   <div class="container">
     <h2 class="visually-hidden">Gallery</h2>
-    <ul
-      class="gallery__list"
-      data-masonry='{ "itemSelector": ".gallery__item", "gutter": 10, "horizontalOrder": true }'
-    >
-      <li class="gallery__sizer"></li>
-      <li class="gallery__item"></li>
-      <li class="gallery__item gallery__item--width-half"></li>
-      <li class="gallery__item gallery-item--width2">
-        <picture>
-          <source
-            srcset="./images/gallery/4/img-l.webp 1x, ./images/gallery/4/img-l@2x.webp 2x"
-            type="image/webp"
-            media="(min-width: 1280px)"
-          />
-          <source
-            srcset="./images/gallery/4/img-l.jpg 1x, ./images/gallery/4/img-l@2x.jpg 2x"
-            type="image/jpeg"
-            media="(min-width: 1280px)"
-          />
-          <source
-            srcset="./images/gallery/4/img-m.webp 1x, ./images/gallery/4/img-m@2x.webp 2x"
-            type="image/webp"
-            media="(min-width: 768px) and (max-width: 1279px)"
-          />
-          <source
-            srcset="./images/gallery/4/img-m.jpg 1x, ./images/gallery/4/img-m@2x.jpg 2x"
-            type="image/jpeg"
-            media="(min-width: 768px) and (max-width: 1279px)"
-          />
-          <source
-            srcset="./images/gallery/4/img-s.webp 1x, ./images/gallery/4/img-s@2x.webp 2x"
-            type="image/webp"
-            media="(max-width: 767px)"
-          />
-          <source
-            srcset="./images/gallery/4/img-s.jpg 1x, ./images/gallery/4/img-s@2x.jpg 2x"
-            type="image/jpeg"
-            media="(max-width: 767px)"
-          />
-          <img class="gallery__img" src="./images/gallery/4/img-s.jpg" alt="Icecream" />
-        </picture>
-      </li>
-      <li class="gallery__item gallery__item--width-half"></li>
-      <li class="gallery__item gallery__item--width-quarter"></li>
-      <li class="gallery__item"></li>
-      <li class="gallery__item">
+    <ul class="gallery__list">
+      <li class="gallery__item gallery__item--column1 gallery-item--row4-6">
         <picture>
           <source
             srcset="./images/gallery/1/img-l.webp 1x, ./images/gallery/1/img-l@2x.webp 2x"
@@ -78,10 +34,14 @@
             type="image/jpeg"
             media="(max-width: 767px)"
           />
-          <img class="gallery__img" src="./images/gallery/1/img-s.jpg" alt="Icecream" />
+          <img
+            class="gallery__img"
+            src="./images/gallery/1/img-s.jpg"
+            alt="Icecream on the plate"
+          />
         </picture>
       </li>
-      <li class="gallery__item">
+      <li class="gallery__item gallery__item--column2 gallery-item--row3-5">
         <picture>
           <source
             srcset="./images/gallery/2/img-l.webp 1x, ./images/gallery/2/img-l@2x.webp 2x"
@@ -113,46 +73,54 @@
             type="image/jpeg"
             media="(max-width: 767px)"
           />
-          <img class="gallery__img" src="./images/gallery/2/img-s.jpg" alt="Icecream" />
+          <img
+            class="gallery__img"
+            src="./images/gallery/2/img-s.jpg"
+            alt="Pink icecream in a cup"
+          />
         </picture>
       </li>
-      <li class="gallery__item">
+      <li class="gallery__item gallery-item--big">
         <picture>
           <source
-            srcset="./images/gallery/5/img-l.webp 1x, ./images/gallery/5/img-l@2x.webp 2x"
+            srcset="./images/gallery/4/img-l.webp 1x, ./images/gallery/4/img-l@2x.webp 2x"
             type="image/webp"
             media="(min-width: 1280px)"
           />
           <source
-            srcset="./images/gallery/5/img-l.jpg 1x, ./images/gallery/5/img-l@2x.jpg 2x"
+            srcset="./images/gallery/4/img-l.jpg 1x, ./images/gallery/4/img-l@2x.jpg 2x"
             type="image/jpeg"
             media="(min-width: 1280px)"
           />
           <source
-            srcset="./images/gallery/5/img-m.webp 1x, ./images/gallery/5/img-m@2x.webp 2x"
+            srcset="./images/gallery/4/img-m.webp 1x, ./images/gallery/4/img-m@2x.webp 2x"
             type="image/webp"
             media="(min-width: 768px) and (max-width: 1279px)"
           />
           <source
-            srcset="./images/gallery/5/img-m.jpg 1x, ./images/gallery/5/img-m@2x.jpg 2x"
+            srcset="./images/gallery/4/img-m.jpg 1x, ./images/gallery/4/img-m@2x.jpg 2x"
             type="image/jpeg"
             media="(min-width: 768px) and (max-width: 1279px)"
           />
           <source
-            srcset="./images/gallery/5/img-s.webp 1x, ./images/gallery/5/img-s@2x.webp 2x"
+            srcset="./images/gallery/4/img-s.webp 1x, ./images/gallery/4/img-s@2x.webp 2x"
             type="image/webp"
             media="(max-width: 767px)"
           />
           <source
-            srcset="./images/gallery/5/img-s.jpg 1x, ./images/gallery/5/img-s@2x.jpg 2x"
+            srcset="./images/gallery/4/img-s.jpg 1x, ./images/gallery/4/img-s@2x.jpg 2x"
             type="image/jpeg"
             media="(max-width: 767px)"
           />
-          <img class="gallery__img" src="./images/gallery/5/img-s.jpg" alt="Icecream" />
+          <img
+            class="gallery__img"
+            src="./images/gallery/4/img-s.jpg"
+            alt="A lot of icecream"
+            loading="lazy"
+          />
         </picture>
       </li>
-      <li class="gallery__item"></li>
-      <li class="gallery__item">
+      <li class="gallery__item gallery__item--column5 gallery-item--row3-5">
         <picture>
           <source
             srcset="./images/gallery/6/img-l.webp 1x, ./images/gallery/6/img-l@2x.webp 2x"
@@ -184,10 +152,15 @@
             type="image/jpeg"
             media="(max-width: 767px)"
           />
-          <img class="gallery__img" src="./images/gallery/6/img-s.jpg" alt="Icecream" />
+          <img
+            class="gallery__img"
+            src="./images/gallery/6/img-s.jpg"
+            alt="Hand with icecream"
+            loading="lazy"
+          />
         </picture>
       </li>
-      <li class="gallery__item">
+      <li class="gallery__item gallery__item--column6 gallery-item--row2-4">
         <picture>
           <source
             srcset="./images/gallery/8/img-l.webp 1x, ./images/gallery/8/img-l@2x.webp 2x"
@@ -219,10 +192,15 @@
             type="image/jpeg"
             media="(max-width: 767px)"
           />
-          <img class="gallery__img" src="./images/gallery/8/img-s.jpg" alt="Icecream" />
+          <img
+            class="gallery__img"
+            src="./images/gallery/8/img-s.jpg"
+            alt="Dog eats icecream"
+            loading="lazy"
+          />
         </picture>
       </li>
-      <li class="gallery__item">
+      <li class="gallery__item gallery__item--column7 gallery-item--row3-5">
         <picture>
           <source
             srcset="./images/gallery/10/img-l.webp 1x, ./images/gallery/10/img-l@2x.webp 2x"
@@ -254,11 +232,15 @@
             type="image/jpeg"
             media="(max-width: 767px)"
           />
-          <img class="gallery__img" src="./images/gallery/10/img-s.jpg" alt="Icecream" />
+          <img
+            class="gallery__img"
+            src="./images/gallery/10/img-s.jpg"
+            alt="Icecream in a cup"
+            loading="lazy"
+          />
         </picture>
       </li>
-      <li class="gallery__item"></li>
-      <li class="gallery__item">
+      <li class="gallery__item gallery__item--column2 gallery-item--row5-7">
         <picture>
           <source
             srcset="./images/gallery/3/img-l.webp 1x, ./images/gallery/3/img-l@2x.webp 2x"
@@ -290,12 +272,55 @@
             type="image/jpeg"
             media="(max-width: 767px)"
           />
-          <img class="gallery__img" src="./images/gallery/3/img-s.jpg" alt="Icecream" />
+          <img
+            class="gallery__img"
+            src="./images/gallery/3/img-s.jpg"
+            alt="Raspberry icecream"
+            loading="lazy"
+          />
         </picture>
       </li>
-      <li class="gallery__item"></li>
-      <li class="gallery__item"></li>
-      <li class="gallery__item">
+      <li class="gallery__item gallery__item--column3 gallery-item--row6-8">
+        <picture>
+          <source
+            srcset="./images/gallery/5/img-l.webp 1x, ./images/gallery/5/img-l@2x.webp 2x"
+            type="image/webp"
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="./images/gallery/5/img-l.jpg 1x, ./images/gallery/5/img-l@2x.jpg 2x"
+            type="image/jpeg"
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="./images/gallery/5/img-m.webp 1x, ./images/gallery/5/img-m@2x.webp 2x"
+            type="image/webp"
+            media="(min-width: 768px) and (max-width: 1279px)"
+          />
+          <source
+            srcset="./images/gallery/5/img-m.jpg 1x, ./images/gallery/5/img-m@2x.jpg 2x"
+            type="image/jpeg"
+            media="(min-width: 768px) and (max-width: 1279px)"
+          />
+          <source
+            srcset="./images/gallery/5/img-s.webp 1x, ./images/gallery/5/img-s@2x.webp 2x"
+            type="image/webp"
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="./images/gallery/5/img-s.jpg 1x, ./images/gallery/5/img-s@2x.jpg 2x"
+            type="image/jpeg"
+            media="(max-width: 767px)"
+          />
+          <img
+            class="gallery__img"
+            src="./images/gallery/5/img-s.jpg"
+            alt="Girl with icecream"
+            loading="lazy"
+          />
+        </picture>
+      </li>
+      <li class="gallery__item gallery__item--column5 gallery-item--row5-7">
         <picture>
           <source
             srcset="./images/gallery/7/img-l.webp 1x, ./images/gallery/7/img-l@2x.webp 2x"
@@ -327,10 +352,15 @@
             type="image/jpeg"
             media="(max-width: 767px)"
           />
-          <img class="gallery__img" src="./images/gallery/7/img-s.jpg" alt="Icecream" />
+          <img
+            class="gallery__img"
+            src="./images/gallery/7/img-s.jpg"
+            alt="Icecream in the hand"
+            loading="lazy"
+          />
         </picture>
       </li>
-      <li class="gallery__item">
+      <li class="gallery__item gallery__item--column6 gallery-item--row4-6">
         <picture>
           <source
             srcset="./images/gallery/9/img-l.webp 1x, ./images/gallery/9/img-l@2x.webp 2x"
@@ -362,7 +392,12 @@
             type="image/jpeg"
             media="(max-width: 767px)"
           />
-          <img class="gallery__img" src="./images/gallery/9/img-s.jpg" alt="Icecream" />
+          <img
+            class="gallery__img"
+            src="./images/gallery/9/img-s.jpg"
+            alt="Icecream in the cup"
+            loading="lazy"
+          />
         </picture>
       </li>
     </ul>
