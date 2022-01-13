@@ -26,7 +26,18 @@
     width: 140px;
     height: 140px;
   }
-  border-radius: 10px;
+}
+.gallery__item--width-half {
+  width: 20px;
+  height: 20px;
+  @include mq(tablet-only) {
+    width: 42.5px;
+    height: 42.5px;
+  }
+  @include mq(desktop) {
+    width: 70px;
+    height: 70px;
+  }
 }
 .gallery-item--width2 {
   width: 80px;
