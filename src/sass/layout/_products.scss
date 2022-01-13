@@ -65,6 +65,7 @@
   padding-bottom: 40px;
   padding-top: 161px;
   position: relative;
+  transition: box-shadow 250ms linear;
   &:nth-child(1) {
     background-color: var(--bg-first-cl);
     margin-bottom: 130px;
@@ -175,6 +176,19 @@
       background-image: -webkit-image-set(url('../images/products/desktop/icecream3-l@2x.webp') 2x);
     }
   }
+}
+
+.products__item:nth-child(1):hover,
+.products__item:nth-child(1):focus {
+  box-shadow: 0 0 10px 5px rgb(0 0 0 / 35%), 0 0 25px 10px rgb(255 184 202 / 71%);
+}
+.products__item:nth-child(2):hover,
+.products__item:nth-child(2):focus {
+  box-shadow: 0 0 10px 5px rgb(0 0 0 / 35%), 0 0 25px 10px rgb(240 209 165 / 71%);
+}
+.products__item:nth-child(3):hover,
+.products__item:nth-child(3):focus {
+  box-shadow: 0 0 10px 5px rgb(0 0 0 / 35%), 0 0 25px 10px rgb(194 226 151 / 71%);
 }
 
 .item__title {
