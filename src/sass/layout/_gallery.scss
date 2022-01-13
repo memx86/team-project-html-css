@@ -1,3 +1,12 @@
+.gallery {
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-dark-cl) 0%,
+    var(--bg-dark-cl) 30%,
+    var(--light-cl) 30%,
+    var(--light-cl) 100%
+  );
+}
 .gallery__list {
   gap: 5px;
   margin: 0 auto;
