@@ -42,7 +42,6 @@
     font-family: Titan One;
     font-weight: 400;
     text-transform: uppercase;
-    @extend %anim-all;
 
     &-head {
       font-size: 18px;
@@ -115,18 +114,23 @@
       }
     }
   }
-
-  &__icon {
-    display: block;
-    --social-color: var(--title-light-cl);
+  &__link {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--light-cl);
-
-    @extend %anim-all;
-
-    .social-box__link:hover &,
-    .social-box__link:focus & {
-      --social-color: var(--accent-cl);
-      color: var(--light-cl);
+    background-color: var(--bg-social-cl);
+    transition: color 250ms linear, background-color 250ms linear;
+    border-radius: 50%;
+    overflow: hidden;
+    &:hover,
+    &:focus {
+      background-color: var(--accent-cl);
+    }
+    &__icon {
+      display: block;
     }
   }
 }
@@ -196,23 +200,4 @@
       padding-top: 9px;
     }
   }
-}
-
-/*Animation variables*/
-
-$anim-func: cubic-bezier(0.4, 0, 0.2, 1);
-$anim-time: 500ms;
-
-/*Animation placeholders*/
-
-%anim-all {
-  transition: all $anim-time $anim-func;
-}
-
-%anim-transform {
-  transition: transform $anim-time $anim-func, color $anim-time $anim-func;
-}
-
-%anim-fill {
-  transition: fill $anim-time $anim-func;
 }

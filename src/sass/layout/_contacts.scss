@@ -1,9 +1,23 @@
 .contacts {
-  background-color: #fff5f6;
+  background-image: linear-gradient(
+    to bottom,
+    var(--light-cl) 0%,
+    var(--light-cl) 9%,
+    var(--bg-dark-cl) 9%,
+    var(--bg-dark-cl) 100%
+  );
 
   padding-top: 43px;
   padding-bottom: 56px;
-
+  @include mq(tablet) {
+    background-image: linear-gradient(
+      to bottom,
+      var(--light-cl) 0%,
+      var(--light-cl) 18%,
+      var(--bg-dark-cl) 18%,
+      var(--bg-dark-cl) 100%
+    );
+  }
   @include mq(tablet-only) {
     padding-top: 60px;
     padding-bottom: 79px;
