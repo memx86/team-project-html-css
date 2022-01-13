@@ -8,8 +8,9 @@
   );
 
   padding-top: 43px;
-  padding-bottom: 56px;
+  padding-bottom: 113px;
   @include mq(tablet) {
+    padding-bottom: 158px;
     background-image: linear-gradient(
       to bottom,
       var(--light-cl) 0%,
@@ -18,13 +19,10 @@
       var(--bg-dark-cl) 100%
     );
   }
-  @include mq(tablet-only) {
-    padding-top: 60px;
-    padding-bottom: 79px;
-  }
+
   @include mq(desktop) {
     padding-top: 66px;
-    padding-bottom: 83px;
+    padding-bottom: 165px;
   }
 }
 
@@ -62,66 +60,71 @@
 
 // Оборачивающий контейнер
 
-.contacts__container {
-  @include mq(mobile) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
 .contacts__wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @include mq(mobile) {
-    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
   }
   @include mq(tablet-only) {
     display: flex;
+
     flex-wrap: nowrap;
-    // margin-bottom: 81px;
-  }
-  @include mq(desktop) {
-    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
 .contacts__card {
   width: 220px;
   height: 427px;
-
   background-color: var(--light-cl);
   border-radius: 24px;
-
-  margin-bottom: 20px;
 
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 43px;
   padding-bottom: 43px;
-
-  margin-left: auto;
-  margin-right: auto;
-
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  @include mq(mobile) {
+    width: 210px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 20px;
+    @include mq(tablet) {
+      margin-bottom: 0;
+    }
+  }
 
   &--mobile {
     @include mq(mobile) {
       margin-right: 20px;
     }
+    @include mq(desktop) {
+      margin-right: 30px;
+    }
   }
-
+  &--tablet {
+    @include mq(tablet) {
+      margin-right: 20px;
+    }
+    @include mq(desktop) {
+      margin-right: 30px;
+    }
+  }
   @include mq(tablet-only) {
     width: 220px;
     height: 544px;
-
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 31px;
     padding-right: 31px;
-
     margin-bottom: 0;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 
   @include mq(desktop) {
@@ -132,40 +135,26 @@
     padding-bottom: 62px;
     padding-left: 43px;
     padding-right: 43px;
-
-    margin-right: 31px;
-    margin-bottom: 0;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }
 
 .contacts__pre-title.cafe {
   width: 80px;
   height: 16px;
-
   font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
   text-align: center;
-
   padding-bottom: 20px;
-
   margin-bottom: 25px;
-
   color: var(--light-cl);
   background-color: var(--bg-second-cl);
-
   text-transform: uppercase;
-
   border-radius: 4px;
 
   @include mq(tablet-only) {
     width: 73px;
     height: 28px;
-
     font-size: 16px;
   }
 
@@ -177,26 +166,20 @@
 .contacts__pre-title.foodtruck {
   width: 130px;
   height: 16px;
-
   font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
   text-align: center;
-
   padding-bottom: 20px;
   margin-bottom: 25px;
-
   color: var(--light-cl);
   background-color: var(--bg-third-cl);
-
   text-transform: uppercase;
-
   border-radius: 4px;
 
   @include mq(tablet-only) {
     width: 138px;
     height: 28px;
-
     font-size: 16px;
   }
 
@@ -209,7 +192,6 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
-
   margin-bottom: 10px;
 
   @include mq(tablet-only) {
@@ -240,7 +222,6 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
-
   margin-bottom: 50px;
 
   @include mq(tablet-only) {
@@ -375,52 +356,49 @@
 
 .location-button {
   @extend %button-dark;
-
-  margin-top: 54px;
+  margin-right: 0;
+  margin-left: 0;
   margin-bottom: 10px;
-  @include mq(tablet-only) {
+  @include mq(mobile) {
     width: 192px;
-
+    margin-bottom: 0;
     margin-right: 15px;
-    margin-left: auto;
   }
 
   @include mq(desktop) {
     width: 198px;
-
-    margin-left: auto;
   }
 }
 
 .franchise-button {
   @extend %button-light;
-
+  margin-right: 0;
+  margin-left: 0;
   @include mq(tablet-only) {
     width: 174px;
-
-    margin-right: auto;
   }
 
   @include mq(desktop) {
     width: 180px;
-
-    margin-left: 15px;
-    margin-right: auto;
   }
 }
 
 .contacts__button {
-  @include mq(tablet-only) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 54px;
+
+  @include mq(mobile) {
     display: flex;
-    align-items: baseline;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-
-    margin: 0;
   }
-
   @include mq(desktop) {
-    display: flex;
-    align-items: baseline;
+    padding-top: 86px;
   }
 }
 
