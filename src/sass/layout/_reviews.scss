@@ -1,13 +1,12 @@
 .review {
-  // padding-top: 80px;
-  padding-top: 30px;
+  padding-top: 40px;
   padding-bottom: 86px;
   @include mq(tablet) {
-    // padding-top: 121px;
+    padding-top: 61px;
     padding-bottom: 119px;
   }
   @include mq(desktop) {
-    // padding-top: 123px;
+    padding-top: 63px;
     padding-bottom: 132px;
   }
 
