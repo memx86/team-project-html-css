@@ -360,8 +360,7 @@
 }
 
 .location-button {
-  color: var(--light-cl);
-  background-color: var(--accent-cl);
+  @extend %button-dark;
 
   margin-top: 54px;
   margin-bottom: 10px;
@@ -380,8 +379,8 @@
 }
 
 .franchise-button {
-  background-color: var(--light-cl);
-  color: var(--accent-cl);
+  @extend %button-light;
+
   @include mq(tablet-only) {
     width: 174px;
 
