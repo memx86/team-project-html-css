@@ -14,20 +14,20 @@
     min-width: 280px;
     height: 308px;
     //   outline: red solid 1px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 10px;
+    margin-left: 10px;
     margin-bottom: 30px;
     background-color: #fafafa;
     position: relative;
     @media screen and (min-width: 420px) and (max-width: 768px) {
       height: 200px;
-      // transform: scaleY(0.5);
-      // transition: transform 500ms linear;
     }
     @include mq(tablet) {
       width: 620px;
       height: 164px;
       background-color: rgba(250, 250, 250, 0.4);
+      margin-left: auto;
+      margin-right: auto;
       margin-bottom: 24px;
     }
     @include mq(desktop) {
@@ -39,7 +39,7 @@
 
   &__gradient-container {
     min-width: 180px;
-    height: 217px;
+    height: 218px;
     margin-right: auto;
     margin-left: auto;
 
@@ -55,8 +55,33 @@
     bottom: 20px;
     left: 50px;
     right: 50px;
-    @media screen and (min-width: 420px) and (max-width: 768px) {
-      height: 108px;
+
+    @media screen and (min-width: 375px) and (max-width: 420px) {
+      height: 157px;
+      background: repeating-linear-gradient(
+        0deg,
+        var(--reviews-cl),
+        var(--reviews-cl) 1px,
+        #fafafa 1px,
+        #fafafa 31px
+      );
+      transform: translateY(-66px);
+      transition: transform 500ms linear;
+    }
+    @media screen and (min-width: 421px) and (max-width: 431px) {
+      height: 125px;
+      background: repeating-linear-gradient(
+        0deg,
+        var(--reviews-cl),
+        var(--reviews-cl) 1px,
+        #fafafa 1px,
+        #fafafa 31px
+      );
+      transform: translateY(15px);
+      transition: transform 500ms linear;
+    }
+    @media screen and (min-width: 432px) and (max-width: 767px) {
+      height: 94px;
       background: repeating-linear-gradient(
         0deg,
         var(--reviews-cl),
@@ -67,6 +92,7 @@
       transform: translateY(-20px);
       transition: transform 500ms linear;
     }
+
     @include mq(tablet) {
       width: 524px;
       height: 90px;
