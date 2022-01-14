@@ -71,7 +71,7 @@
       line-height: 1.15;
       letter-spacing: 0.04em;
       width: 429px;
-      margin-bottom: 0;
+      margin-bottom: 50px;
     }
     @include mq(desktop) {
       font-size: 58px;
@@ -141,6 +141,8 @@
       position: static;
       transform: none;
       width: 340px;
+      margin-left: 0;
+      margin-right: 0;
       margin-bottom: 62px;
     }
     @include mq(desktop) {
