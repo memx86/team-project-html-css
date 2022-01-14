@@ -46,7 +46,7 @@
       </ul>
     </nav>
     <!-- Бургер для мобильного меню -->
-    <button type="button" class="burger__btn" data-menu-button>
+    <button type="button" class="burger__btn" aria-label="Burger menu" data-menu-button>
       <span class="header__line header__line-first"></span>
       <span class="header__line header__line-second"></span>
       <span class="header__line header__line-third"></span>
@@ -141,7 +141,12 @@
             incididunt ut labore et
           </p>
           <a href="#about-us" class="hero__img-arrow">
-            <svg class="hero__icon" width="10" height="10" aria-label="">
+            <svg
+              class="hero__icon"
+              width="10"
+              height="10"
+              aria-label="Go to How it is made section"
+            >
               <use class="" href="./images/sprite.svg#arrow-right"></use>
             </svg>
           </a>
