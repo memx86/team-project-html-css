@@ -1,29 +1,40 @@
-export default function createModal(refs) {
-  refs.openBtn.addEventListener('click', onModalOpenBtnClick);
-  refs.openBtnMobileMenu?.addEventListener('click', onModalOpenBtnClick);
-  function onModalOpenBtnClick() {
-    openModal();
-    refs.closeBtn.addEventListener('click', closeModal);
-    refs.modal.addEventListener('click', onBackdropClick);
-    document.addEventListener('keydown', onEscDown);
+// Expects object with following refs
+//  {
+//  modal: modal window ref,
+//  openBtn: open modal window btn ref,
+//  closeBtn: close modal window btn ref,
+//  openBtnSecond: optional modal window btn ref, //optional
+// }
+
+export default class Modal {
+  constructor(refs) {
+    this.refs = refs;
+    this.refs.openBtn.addEventListener('click', this.onModalOpenBtnClick);
+    this.refs.openBtnSecond?.addEventListener('click', this.onModalOpenBtnClick);
   }
-  function openModal() {
-    refs.modal.classList.remove('is-hidden');
+  onModalOpenBtnClick = () => {
+    this.openModal();
+    this.refs.closeBtn.addEventListener('click', this.closeModal);
+    this.refs.modal.addEventListener('click', this.onBackdropClick);
+    document.addEventListener('keydown', this.onEscDown);
+  };
+  openModal = () => {
+    this.refs.modal.classList.remove('is-hidden');
     document.body.classList.add('modal-open');
-  }
-  function closeModal() {
-    refs.modal.classList.add('is-hidden');
+  };
+  closeModal = () => {
+    this.refs.modal.classList.add('is-hidden');
     document.body.classList.remove('modal-open');
-    refs.closeBtn.removeEventListener('click', closeModal);
-    refs.modal.removeEventListener('click', onBackdropClick);
-    document.removeEventListener('keydown', onEscDown);
-  }
-  function onBackdropClick(e) {
-    if (e.target !== refs.modal) return;
-    closeModal();
-  }
-  function onEscDown(e) {
+    this.refs.closeBtn.removeEventListener('click', this.closeModal);
+    this.refs.modal.removeEventListener('click', this.onBackdropClick);
+    document.removeEventListener('keydown', this.onEscDown);
+  };
+  onBackdropClick = e => {
+    if (e.target !== this.refs.modal) return;
+    this.closeModal();
+  };
+  onEscDown = e => {
     if (e.code !== 'Escape') return;
-    closeModal();
-  }
+    this.closeModal();
+  };
 }
