@@ -1,14 +1,19 @@
-// Expects object with following refs
-//  {
-//  modal: modal window ref,
-//  openBtn: open modal window btn ref,
-//  closeBtn: close modal window btn ref,
-//  openBtnSecond: optional modal window btn ref, //optional
-// }
-
+/**
+ * Задать кнопке открытия модального окна аттрибут data-modal-open="[name]"
+ * Задать второй кнопке открытия модального окна data-modal-open="[name]-second"
+ * Задать backdrop модального окна аттрибуты data-modal="[name]", class="is-hidden"
+ * Задать кнопке закрытия модального окна аттрибут data-modal-close="[name]"
+ * Модальное окно закрывается по клику на кнопку закрытия, по клику в бэкдроп,
+ * по нажатию клавиши "Esc"
+ */
 export default class Modal {
-  constructor(refs) {
-    this.refs = refs;
+  constructor(name) {
+    this.refs = {
+      modal: document.querySelector(`[data-modal="${name}"]`),
+      openBtn: document.querySelector(`[data-modal-open="${name}"]`),
+      openBtnSecond: document.querySelector(`[data-modal-open="${name}-second"]`),
+      closeBtn: document.querySelector(`[data-modal-close="${name}"]`),
+    };
     this.refs.openBtn.addEventListener('click', this.onModalOpenBtnClick);
     this.refs.openBtnSecond?.addEventListener('click', this.onModalOpenBtnClick);
   }
